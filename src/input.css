@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+
+@layer utilites{
+    .font-nunito{
+        font-family:"nunito";
+    }
+    .font-poppins{
+        font-family:"poppins";
+    }
+    .text-ungu{
+        color:#5A4FCF;
+    }
+    .text-base-custom{
+        font-size:16px;
+        font-weight:500;
+        line-height:100%;
+    }
+    .bg-button{
+        background-color:#FDC886;
+    }
+    .text-abu-abu{
+        color:#656565;
+    }
+    .bg-image-oren {
+    background-image:linear-gradient(to right, rgba(253, 200, 134, 0.15), white);
+  }
+},
+style{
+    .ungu { color: #5A4FCF; }
+        .bg-ungu { background-color: #5A4FCF; }
+        .bg-violet-50 { background-color: #f5f3ff; }
+        .bg-violet-100 { background-color: #ede9fe; }
+        .bg-violet-200 { background-color: #ddd6fe; }
+}
+
+
+
+
+    
