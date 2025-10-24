@@ -1,248 +1,269 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const searchToggle = document.getElementById('search-toggle');
-    const searchBox = document.getElementById('search-box');
-    const overlay = document.getElementById('overlay');
-    const categoryToggle = document.getElementById('category-toggle');
-    const categoryIcon = document.getElementById('category-icon');
-    const categoryDropdown = document.getElementById('category-dropdown');
-    const desktopSearchToggle = document.getElementById('desktop-search-toggle');
-    const desktopSearchBox = document.getElementById('desktop-search-box');
-    const desktopSearchButton = document.getElementById('desktop-search-button');
-    const desktopSearchInput = document.getElementById('desktop-search');
-    const desktopSearchContainer = document.getElementById('desktop-search-container');
-    const mobileSearchButton = document.getElementById('mobile-search-button');
-    const searchInputMobile = document.querySelector('#search-box input');
-    const searchResultsPopup = document.getElementById('search-results-popup');
-    const searchResultsContent = document.getElementById('search-results-content');
-    const closeResultsPopup = document.getElementById('close-results-popup');
+  // Variabel global untuk tracking state
+  let currentAlertTimeout = null;
+  let isAlertVisible = false;
 
-    // Toggle mobile menu
-    menuToggle.addEventListener('click', function() {
-        const isOpen = !mobileMenu.classList.contains('-translate-x-full');
-        
-        if (isOpen) {
-            mobileMenu.classList.add('-translate-x-full');
-            overlay.classList.add('hidden');
-            document.body.style.overflow = '';
-            menuToggle.classList.remove('menu-open');
-            // Tutup dropdown category saat menu ditutup
-            if (categoryDropdown) {
-                categoryDropdown.classList.add('hidden');
-                categoryIcon.classList.remove('rotate-180');
-            }
-        } else {
-            mobileMenu.classList.remove('-translate-x-full');
-            overlay.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-            menuToggle.classList.add('menu-open');
-            searchBox.classList.add('hidden');
-            desktopSearchBox.classList.add('hidden');
-            searchResultsPopup.classList.add('hidden');
-        }
-    });
+  // Toggle menu mobile
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('overlay');
+  const menuIcon = document.getElementById('menu-icon');
 
-    // Toggle search box mobile
-    searchToggle.addEventListener('click', function() {
-        const isSearchOpen = !searchBox.classList.contains('hidden');
-        
-        if (isSearchOpen) {
-            searchBox.classList.add('hidden');
-            overlay.classList.add('hidden');
-            document.body.style.overflow = '';
-            searchResultsPopup.classList.add('hidden');
-        } else {
-            searchBox.classList.remove('hidden');
-            overlay.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-            mobileMenu.classList.add('-translate-x-full');
-            menuToggle.classList.remove('menu-open');
-            desktopSearchBox.classList.add('hidden');
-            searchResultsPopup.classList.add('hidden');
-            setTimeout(() => searchInputMobile.focus(), 100);
-        }
-    });
+  menuToggle.addEventListener('click', function() {
+    const isOpen = mobileMenu.classList.contains('translate-x-0');
 
-    // Toggle search box desktop (untuk layar kecil desktop)
-    if (desktopSearchToggle) {
-        desktopSearchToggle.addEventListener('click', function() {
-            const isSearchOpen = !desktopSearchBox.classList.contains('hidden');
-            
-            if (isSearchOpen) {
-                desktopSearchBox.classList.add('hidden');
-                overlay.classList.add('hidden');
-                document.body.style.overflow = '';
-            } else {
-                desktopSearchBox.classList.remove('hidden');
-                overlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-                mobileMenu.classList.add('-translate-x-full');
-                menuToggle.classList.remove('menu-open');
-                searchBox.classList.add('hidden');
-                searchResultsPopup.classList.add('hidden');
-                setTimeout(() => desktopSearchBox.querySelector('input').focus(), 100);
-            }
-        });
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      mobileMenu.classList.remove('-translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+      overlay.classList.remove('hidden');
+      menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+      hideAlert();
+    }
+  });
+
+  // Toggle dropdown category di mobile dengan animasi lebih lama
+  const categoryToggle = document.getElementById('category-toggle');
+  const categoryDropdown = document.getElementById('category-dropdown');
+  const categoryIcon = document.getElementById('category-icon');
+
+  categoryToggle.addEventListener('click', function() {
+    const isExpanded = categoryDropdown.classList.contains('hidden');
+
+    if (isExpanded) {
+      // Buka dropdown dengan animasi
+      categoryDropdown.classList.remove('hidden');
+      categoryIcon.classList.add('rotate-180');
+      
+      // Trigger reflow untuk memastikan animasi berjalan
+      void categoryDropdown.offsetWidth;
+      
+      // Tambahkan class untuk animasi
+      categoryDropdown.classList.remove('opacity-0', 'scale-95', 'mt-2');
+      categoryDropdown.classList.add('opacity-100', 'scale-100', 'mt-3');
+    } else {
+      // Tutup dropdown dengan animasi
+      categoryDropdown.classList.remove('opacity-100', 'scale-100', 'mt-3');
+      categoryDropdown.classList.add('opacity-0', 'scale-95', 'mt-2');
+      categoryIcon.classList.remove('rotate-180');
+      
+      // Tunggu animasi selesai sebelum menyembunyikan
+      setTimeout(() => {
+        categoryDropdown.classList.add('hidden');
+      }, 300); // Sesuai dengan duration CSS
+    }
+  });
+
+  // Toggle search box mobile
+  const searchToggle = document.getElementById('search-toggle');
+  const searchBox = document.getElementById('search-box');
+
+  searchToggle.addEventListener('click', function() {
+    searchBox.classList.toggle('hidden');
+    hideAlert();
+  });
+
+  // Toggle search box desktop
+  const desktopSearchToggle = document.getElementById('desktop-search-toggle');
+  const desktopSearchBox = document.getElementById('desktop-search-box');
+
+  desktopSearchToggle.addEventListener('click', function() {
+    desktopSearchBox.classList.toggle('hidden');
+    hideAlert();
+  });
+
+  // Tutup menu saat klik overlay
+  overlay.addEventListener('click', closeMobileMenu);
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+    menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+  }
+
+  // Fungsi menampilkan alert
+  function showAlert(message, type = 'info', duration = 5000) {
+    const alert = document.getElementById('search-alert');
+    const alertMessage = document.getElementById('alert-message');
+
+    if (currentAlertTimeout) {
+      clearTimeout(currentAlertTimeout);
     }
 
-    // Fungsi pencarian desktop
-    if (desktopSearchButton && desktopSearchInput) {
-        // Handle klik tombol search
-        desktopSearchButton.addEventListener('click', function() {
-            performSearch(desktopSearchInput.value);
-        });
-        
-        // Handle tekan Enter di input
-        desktopSearchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch(desktopSearchInput.value);
-            }
-        });
+    alertMessage.textContent = message;
+
+    const borderColors = {
+      success: 'border-green-600',
+      warning: 'border-yellow-500',
+      error: 'border-red-600',
+      info: 'border-purple-600'
+    };
+
+    alert.classList.remove('border-green-600', 'border-yellow-500', 'border-red-600', 'border-purple-600');
+    alert.classList.add(borderColors[type] || 'border-purple-600');
+
+    alert.classList.remove('hidden');
+    setTimeout(() => {
+      alert.classList.remove('translate-x-full');
+      alert.classList.add('translate-x-0');
+    }, 10);
+
+    isAlertVisible = true;
+
+    currentAlertTimeout = setTimeout(() => {
+      hideAlert();
+    }, duration);
+  }
+
+  function hideAlert() {
+    const alert = document.getElementById('search-alert');
+    if (!isAlertVisible) return;
+
+    alert.classList.remove('translate-x-0');
+    alert.classList.add('translate-x-full');
+
+    setTimeout(() => {
+      alert.classList.add('hidden');
+      isAlertVisible = false;
+    }, 300);
+
+    if (currentAlertTimeout) {
+      clearTimeout(currentAlertTimeout);
+      currentAlertTimeout = null;
+    }
+  }
+
+  document.getElementById('close-alert').addEventListener('click', hideAlert);
+
+  menuToggle.addEventListener('click', hideAlert);
+  searchToggle.addEventListener('click', hideAlert);
+  desktopSearchToggle.addEventListener('click', hideAlert);
+
+  // Optimasi event scroll
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(hideAlert, 100);
+  });
+
+  document.addEventListener('click', function(event) {
+    const alert = document.getElementById('search-alert');
+    if (!alert) return;
+    
+    const isClickInsideAlert = alert.contains(event.target);
+    const isClickOnSearchInput =
+      event.target.matches('input[type="text"]') ||
+      event.target.closest('input[type="text"]');
+
+    if (!isClickInsideAlert && !isClickOnSearchInput && isAlertVisible) {
+      hideAlert();
+    }
+  });
+
+  // Fungsi pencarian
+  function handleSearch(searchInput, searchType) {
+    const searchTerm = searchInput.value.trim();
+
+    if (searchType === 'mobile') {
+      searchBox.classList.add('hidden');
     }
 
-    // Handle pencarian mobile
-    if (mobileSearchButton && searchInputMobile) {
-        mobileSearchButton.addEventListener('click', function() {
-            performMobileSearch(searchInputMobile.value);
-        });
-        
-        searchInputMobile.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performMobileSearch(searchInputMobile.value);
-            }
-        });
+    if (searchType === 'small-desktop') {
+      desktopSearchBox.classList.add('hidden');
     }
 
-    // Fungsi untuk melakukan pencarian
-    function performSearch(query) {
-        if (query.trim() !== '') {
-            alert('Searching for: ' + query); // Ganti dengan fungsi pencarian sebenarnya
-            // Contoh: window.location.href = '/search?q=' + encodeURIComponent(query);
-        }
+    if (searchTerm === '') {
+      showAlert('Silakan masukkan kata kunci pencarian.', 'warning', 3000);
+      return;
     }
 
-    // Fungsi untuk menampilkan hasil pencarian mobile
-    function performMobileSearch(query) {
-        if (query.trim() !== '') {
-            // Sembunyikan keyboard virtual (opsional)
-            searchInputMobile.blur();
-            
-            // Tampilkan loading state
-            searchResultsContent.innerHTML = '<div class="text-center py-4">Searching...</div>';
-            searchResultsPopup.classList.remove('hidden');
-            searchResultsPopup.classList.add('animate-slide-in');
-            
-            // Simulasi delay pencarian
-            setTimeout(() => {
-                // Hasil pencarian contoh (ganti dengan hasil sebenarnya dari API)
-                const mockResults = [
-                    { name: "Spaghetti Carbonara", restaurant: "Italian Bistro", price: "Rp 125.000" },
-                    { name: "Chicken Teriyaki", restaurant: "Asian Fusion", price: "Rp 85.000" },
-                    { name: "Beef Burger", restaurant: "American Grill", price: "Rp 75.000" },
-                    { name: "Nasi Goreng Special", restaurant: "Warung Indonesia", price: "Rp 45.000" },
-                    { name: "Sushi Platter", restaurant: "Tokyo Sushi", price: "Rp 150.000" }
-                ];
-                
-                // Kosongkan konten sebelumnya
-                searchResultsContent.innerHTML = '';
-                
-                // Tambahkan hasil pencarian
-                if (mockResults.length > 0) {
-                    mockResults.forEach(item => {
-                        const resultItem = document.createElement('div');
-                        resultItem.className = 'p-3 border-b border-gray-100 hover:bg-gray-50 rounded search-result-item';
-                        resultItem.innerHTML = `
-                            <h4 class="font-medium">${item.name}</h4>
-                            <div class="flex justify-between text-sm text-gray-500 mt-1">
-                                <span>${item.restaurant}</span>
-                                <span class="text-[#5A4FCF] font-medium">${item.price}</span>
-                            </div>
-                        `;
-                        searchResultsContent.appendChild(resultItem);
-                        
-                        // Tambahkan event click untuk item hasil pencarian
-                        resultItem.addEventListener('click', function() {
-                            alert(`Anda memilih: ${item.name}`);
-                            // Bisa diganti dengan navigasi ke halaman detail
-                        });
-                    });
-                } else {
-                    searchResultsContent.innerHTML = '<div class="text-center py-4 text-gray-500">Tidak ada hasil ditemukan</div>';
-                }
-            }, 800);
-        }
+    if (searchTerm.length < 2) {
+      showAlert('Kata kunci pencarian harus minimal 2 karakter.', 'warning', 3000);
+      return;
     }
 
-    // Tutup popup hasil pencarian
-    if (closeResultsPopup) {
-        closeResultsPopup.addEventListener('click', function() {
-            searchResultsPopup.classList.add('hidden');
-        });
+    showAlert(`Sedang mencari "${searchTerm}"...`, 'info', 4000);
+
+    setTimeout(() => {
+      const foods = ['Pizza', 'Burger', 'Sushi', 'Pasta', 'Salad', 'Steak', 'Ramen', 'Tacos', 'Nasi Goreng', 'Mie Ayam'];
+      const found = foods.filter(food =>
+        food.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+
+      if (found.length > 0) {
+        const results = found.slice(0, 3);
+        const moreCount = found.length - 3;
+        const moreText = moreCount > 0 ? ` dan ${moreCount} lainnya` : '';
+        showAlert(`Ditemukan ${found.length} hasil untuk "${searchTerm}": ${results.join(', ')}${moreText}`, 'success', 7000);
+      } else {
+        showAlert(`Maaf, tidak ditemukan hasil untuk "${searchTerm}". Coba kata kunci lain.`, 'error', 7000);
+      }
+    }, 2500);
+  }
+
+  // Event listener untuk pencarian mobile
+  const mobileSearchInput = document.getElementById('mobile-search-input');
+  const mobileSearchButton = document.getElementById('mobile-search-button');
+
+  mobileSearchButton.addEventListener('click', function() {
+    handleSearch(mobileSearchInput, 'mobile');
+  });
+
+  mobileSearchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      handleSearch(mobileSearchInput, 'mobile');
     }
+  });
 
-    // Toggle category dropdown di mobile
-    if (categoryToggle) {
-        let categoryOpen = false;
-        
-        categoryToggle.addEventListener('click', function(e) {
-            e.stopPropagation(); // Mencegah event bubbling ke overlay
-            categoryOpen = !categoryDropdown.classList.contains('hidden');
-            
-            if (categoryOpen) {
-                categoryDropdown.classList.add('hidden');
-                categoryIcon.classList.remove('rotate-180');
-            } else {
-                categoryDropdown.classList.remove('hidden');
-                categoryIcon.classList.add('rotate-180');
-            }
-            categoryOpen = !categoryOpen;
-        });
-        
-        // Mencegah dropdown menutup saat mengklik item di dalamnya
-        categoryDropdown.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
+  // Pencarian desktop kecil
+  const smallDesktopSearchInput = document.getElementById('small-desktop-search-input');
+  const smallDesktopSearchButton = document.getElementById('small-desktop-search-button');
+
+  smallDesktopSearchButton.addEventListener('click', function() {
+    handleSearch(smallDesktopSearchInput, 'small-desktop');
+  });
+
+  smallDesktopSearchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      handleSearch(smallDesktopSearchInput, 'small-desktop');
     }
+  });
 
-    // Close all when clicking overlay
-    overlay.addEventListener('click', function() {
-        mobileMenu.classList.add('-translate-x-full');
-        searchBox.classList.add('hidden');
-        desktopSearchBox.classList.add('hidden');
-        searchResultsPopup.classList.add('hidden');
-        overlay.classList.add('hidden');
-        document.body.style.overflow = '';
-        menuToggle.classList.remove('menu-open');
-        
-        // Tutup dropdown category saat overlay diklik
-        if (categoryDropdown) {
-            categoryDropdown.classList.add('hidden');
-            categoryIcon.classList.remove('rotate-180');
-        }
-    });
+  // Pencarian desktop besar
+  const desktopSearchInput = document.getElementById('desktop-search');
+  const desktopSearchButton = document.getElementById('desktop-search-button');
 
-    // Close menu when clicking a link (kecuali link dalam dropdown)
-    document.querySelectorAll('#mobile-menu > ul > li > a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Jika yang diklik bukan bagian dari dropdown
-            if (!this.closest('li.relative ul')) {
-                mobileMenu.classList.add('-translate-x-full');
-                overlay.classList.add('hidden');
-                document.body.style.overflow = '';
-                menuToggle.classList.remove('menu-open');
-            }
-        });
-    });
+  desktopSearchButton.addEventListener('click', function() {
+    handleSearch(desktopSearchInput, 'desktop');
+  });
 
-    // Tutup popup hasil pencarian saat klik di luar
-    document.addEventListener('click', function(e) {
-        if (searchResultsPopup && !searchResultsPopup.contains(e.target) && 
-            e.target !== mobileSearchButton && 
-            e.target !== searchInputMobile &&
-            !searchBox.contains(e.target)) {
-            searchResultsPopup.classList.add('hidden');
-        }
-    });
+  desktopSearchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      handleSearch(desktopSearchInput, 'desktop');
+    }
+  });
+
 });
+const button = document.getElementById('dropdownButton');
+    const menu = document.getElementById('dropdownMenu');
+    const locationText = document.getElementById('selectedLocation');
+    const options = menu.querySelectorAll('button');
+
+    // Toggle dropdown
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Pilih lokasi
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        locationText.textContent = option.textContent;
+        menu.classList.add('hidden');
+      });
+    });
+  
+
+      
+    

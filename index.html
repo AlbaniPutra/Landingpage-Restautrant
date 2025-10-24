@@ -11,288 +11,316 @@
     <!-- Tailwind Css -->
     <link rel="stylesheet" href="src/output.css">
 </head>
-    <body class="bg-white font-poppins text-base-custom">
-      <!-- Navbar Utama -->
-    <header class="container">
-        <nav class="flex fixed justify-between items-center px-4 sm:px-14 bg-white w-full py-4 z-50 shadow-sm">
-            <!-- Menu Navigasi -->
-            <ul class="hidden md:flex gap-[30px] mr-auto">
-                <li><a href="#home" class="hover:text-ungu">Home</a></li>
-                
-                <!-- Category dengan dropdown di desktop -->
-                <li class="relative group">
-                    <button class="flex items-center gap-1 hover:text-ungu">
-                        <span>Category</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <ul class="absolute left-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block z-50">
-                        <li><a href="#special" class="block px-4 py-2 hover:bg-violet-50 hover:text-[#5A4FCF]">Special Benefit</a></li>
-                        <li><a href="#featured" class="block px-4 py-2 hover:bg-violet-50 hover:text-[#5A4FCF]">Featured Restaurant</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="#services" class="hover:text-ungu">Services</a></li>
-                <li><a href="#about" class="hover:text-ungu">About us</a></li>    
-            </ul>
+  <body class="bg-white font-poppins text-sm">
 
-            <!-- Hamburger Menu -->
-            <button id="menu-toggle" class="sm:hidden flex items-center justify-center w-8 h-8 mr-4">
-                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+  <!-- Navbar Utama -->
+<header class="container">
+     <nav class="flex fixed px-5 justify-between items-center bg-white w-full py-4 z-50 shadow-sm  shadow-gray-400 top-0">
+    <!-- Menu Navigasi -->
+    <ul class="hidden md:flex gap-[30px] mr-auto">
+      <li><a href="#home" class="hover:text-purple-600 transition-colors text-base">Home</a></li>
+      <!-- Category dropdown di desktop/laptop -->
+      <li class="relative group">
+        <button class="flex items-center gap-1 hover:text-purple-600 transition-colors">
+          <span class="text-base">Category</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-wdth="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <ul class="absolute left-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block z-50">
+          <li><a href="#special" class="block px-4 py-2 hover:bg-violet-50 hover:text-purple-600 transition-colors text-sm">Special Benefit</a></li>
+          <li><a href="#featured" class="block px-4 py-2 hover:bg-violet-50 hover:text-purple-600 transition-colors text-sm">Featured Restaurant</a></li>
+        </ul>
+      </li>
+      <li><a href="#services" class="hover:text-purple-600 transition-colors text-base">Services</a></li>
+      <li><a href="#about" class="hover:text-purple-600 transition-colors text-base">About us</a></li>    
+    </ul>
+    <!-- Hamburger Menu -->
+    <button id="menu-toggle" class="md:hidden flex items-center justify-center w-8 h-8 mr-4">
+      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
 
-            <!-- Logo -->
-            <div class="flex items-center gap-2 mx-auto sm:mx-0">
-                <h1 class="font-extrabold text-[24px] sm:text-[28px]">Resto</h1>
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="26.92" height="28.33" fill="#5A4FCF" class="w-6 h-6 sm:w-[26.92px] sm:h-[28.33px]">
-                        <path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
-                    </svg>
-                </span>
-            </div>
-
-            <!-- Pencarian dan Login -->
-            <div class="flex items-center gap-3 sm:gap-5 ml-auto">
-                <!-- Pencarian Desktop -->
-                <div class="hidden sm:flex items-center gap-2.5 relative">
-                    <div id="desktop-search-container" class="hidden lg:flex items-center bg-gray-100 rounded-lg px-4 py-2 w-[200px] xl:w-[300px] transition-all duration-300 focus-within:bg-white focus-within:ring-2 focus-within:ring-[#5A4FCF]">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50" class="min-w-[20px]">
-                            <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
-                        </svg>
-                        <input type="text" id="desktop-search" placeholder="Search your favorite food..." class="bg-transparent border-none focus:outline-none w-full pl-2">
-                    </div>
-                    <button id="desktop-search-button" class="hidden lg:flex items-center gap-1 text-gray-500 hover:text-[#5A4FCF]">
-                        <span class="hidden xl:inline">Search</span>
-                    </button>
-                    
-                    <!-- Tampilan kecil desktop -->
-                    <button id="desktop-search-toggle" class="lg:hidden flex items-center gap-2.5">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50" class="min-w-[20px]">
-                            <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
-                        </svg>
-                        <span class="hidden lg:inline">Search</span>
-                    </button>
-                </div>
-                
-                <!-- Icon Pencarian Mobile -->
-                <button id="search-toggle" class="p-2 sm:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50" class="min-w-[20px]">
-                        <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
-                    </svg>
-                </button>
-                
-                <button class="font-semibold text-[#5A4FCF] px-4 py-2 sm:px-7 sm:py-3 rounded-xl bg-violet-100 text-sm sm:text-base hover:bg-violet-200">Log In</button>
-            </div>
-        </nav>
-
-        <!-- Sidebar Mobile - Hanya di mobile -->
-        <div id="mobile-menu" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-40 transform -translate-x-full transition-transform duration-300 ease-in-out pt-16 sm:hidden">
-            <ul class="flex flex-col px-6 py-4 space-y-4">
-                <li><a href="#home" class="block py-2 hover:text-[#5A4FCF]">Home</a></li>
-                
-                <!-- Category dengan dropdown di mobile -->
-                <li class="relative">
-                    <button id="category-toggle" class="flex items-center justify-between w-full py-2 hover:text-[#5A4FCF]">
-                        <span>Category</span>
-                        <svg id="category-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <ul id="category-dropdown" class="pl-4 hidden space-y-2 mt-2">
-                        <li><a href="#special" class="block py-1 hover:text-[#5A4FCF]">Special Benefit</a></li>
-                        <li><a href="#featured" class="block py-1 hover:text-[#5A4FCF]">Featured Restaurant</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="#services" class="block py-2 hover:text-[#5A4FCF]">Services</a></li>
-                <li><a href="#about" class="block py-2 hover:text-[#5A4FCF]">About us</a></li>
-            </ul>
-        </div>
-
-        <!-- Search Box Mobile -->
-        <div id="search-box" class="fixed top-16 left-0 right-0 bg-white shadow-md z-40 p-4 hidden sm:hidden w-full">
-            <div class="flex items-center gap-2 w-full px-4">
-                <input type="text" placeholder="Search your favorite food..." class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#5A4FCF] w-full">
-                <button class="bg-[#5A4FCF] text-white px-4 py-3 rounded-lg hover:bg-[#4a42b8] whitespace-nowrap">Search</button>
-            </div>
-        </div>
-
-        <!-- Search Box Desktop (untuk layar kecil desktop) -->
-        <div id="desktop-search-box" class="fixed top-16 right-4 bg-white shadow-md z-40 p-4 hidden rounded-lg w-80">
-            <div class="flex items-center gap-2 w-full">
-                <input type="text" placeholder="Search your favorite food..." class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#5A4FCF] w-full">
-                <button class="bg-[#5A4FCF] text-white px-4 py-2 rounded-lg hover:bg-[#4a42b8] whitespace-nowrap">Search</button>
-            </div>
-        </div>
-
-        <!-- Overlay -->
-    </header>
-
-    <!-- Hero Section -->
-    <section class="container py-34 ps-14" id="home">
-      <div class="relative w-full h-[564px] ">
-        <!-- Pembungkus Gambar -->
-        <div class="items-center gap-4 ps-14 w-full grid grid-cols-2 md:flex ">
-          <!-- Gambar 1-->
-          <img src="dist/image/1.png"class="object-cover rounded-3xl  md:w-[1000px] h-[564px] "></img>
-          <!-- Gambar 2-->
-          <img src="dist/image/2.png" class=" object-cover rounded-l-3xl w-full h-[564px]"></img>
-        </div>
-
-         <!-- Kartu Info -->
-      <div class="absolute bg-white h-[240px] w-[300px] py-5 px-4 rounded-r-3xl top-[172px]">
-          <!-- Rating -->
-          <div class="flex gap-2 items-center text-sm">
-            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
-            <span class="text-yellow-400 font-semibold">5.0</span>
-            <span class="text-abu-abu">(5.2k+)</span>
-          </div>
-       <!-- Nama dan Harga -->
-          <h4 class="text-lg font-poppins font-semibold mt-1">Padang Restaurant</h4>
-          <p class="mt-1 text-abu-abu font-semibold">IDR 49.999 - IDR 560.000</p>
-        <!-- Lokasi -->
-          <div class="flex gap-2 mt-2 items-center ">
-            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="#656565"/>
-            </svg>
-            <p class="text-abu-abu text-base">Padang, Indonesia</p>
-          </div>
-        <!-- Tombol -->
-          <button class="py-3.5 px-3.5 bg-button rounded-xl mt-4 mb-2">
-            <span class="flex items-center hover:text-amber-600">
-              <p class="">Make Reservation</p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            </span>
-          </button>
-          <p class="flex items-center gap-2 text-abu-abu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0_3_338" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2H21.9999V22H2V2Z" fill="white"/>
-                </mask>
-                <g mask="url(#mask0_3_338)">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.664 3.5C5.135 3.5 3.5 5.233 3.5 7.916V16.084C3.5 18.767 5.135 20.5 7.664 20.5H16.332C18.864 20.5 20.5 18.767 20.5 16.084V7.916C20.5 5.233 18.864 3.5 16.334 3.5H7.664ZM16.332 22H7.664C4.276 22 2 19.622 2 16.084V7.916C2 4.378 4.276 2 7.664 2H16.334C19.723 2 22 4.378 22 7.916V16.084C22 19.622 19.723 22 16.332 22Z" fill="#656565"/>
-                </g>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.994 16.75C11.58 16.75 11.244 16.414 11.244 16V12C11.244 11.586 11.58 11.25 11.994 11.25C12.408 11.25 12.744 11.586 12.744 12V16C12.744 16.414 12.408 16.75 11.994 16.75Z" fill="#656565"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9989 9.2041C11.4459 9.2041 10.9939 8.7571 10.9939 8.2041C10.9939 7.6511 11.4369 7.2041 11.9889 7.2041H11.9989C12.5519 7.2041 12.9989 7.6511 12.9989 8.2041C12.9989 8.7571 12.5519 9.2041 11.9989 9.2041Z" fill="#656565"/>
-            </svg>No extra cost
-          </p>
-       </div>
+    <!-- Logo -->
+    <div class="flex items-center gap-2 mx-auto md:mx-0">
+      <h1 class="font-extrabold text-xl md:text-2xl">Resto</h1>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="26.92" height="28.33" fill="#5A4FCF" class="w-6 h-6 md:w-[26.92px] md:h-[28.33px]">
+          <path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+        </svg>
+      </span>
     </div>
-     </section>
+    <!-- Pencarian dan Login -->
+    <div class="flex items-center gap-3 sm:gap-5 ml-auto">
+      <!-- Pencarian Desktop -->
+      <div class="hidden sm:flex items-center gap-2.5 relative">
+        <div id="desktop-search-container" class="shadow-md shadow-gray-400 hidden lg:flex items-center bg-gray-100 rounded-lg px-4 py-2 w-[200px] xl:w-[300px] transition-all duration-300 focus-within:bg-white focus-within:ring-2 focus-within:ring-purple-600">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50" class="min-w-[20px]">
+            <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
+          </svg>
+          <input type="text" id="desktop-search" placeholder="Search your favorite food..." class="bg-transparent border-none focus:outline-none w-full pl-2 ">
+        </div>
+        <button id="desktop-search-button" class="shadow-md shadow-gray-500 hidden lg:flex items-center gap-1 px-2 py-2 rounded-full bg-gray-300 text-gray-700 hover:text-purple-600 focus-within:bg-gray-100 focus-within:right-3 focus-within:ring-purple-300">
+          <span class="hidden lg:inline text-base">Search</span>
+        </button>
+        
+        <!-- Tampilan kecil desktop -->
+        <button id="desktop-search-toggle" class="lg:hidden flex items-center gap-2.5 ">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50" class="min-w-[20px]">
+            <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
+          </svg>
+          <span class="hidden lg:inline">Search</span>
+        </button>
+      </div>
+      
+      <!-- Icon Pencarian Mobile -->
+      <button id="search-toggle" class="p-2 sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50" class="min-w-[20px]">
+          <path d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z"></path>
+        </svg>
+      </button>
+      <button class="font-semibold text-purple-600 px-4 py-2 sm:px-7 sm:py-3 rounded-xl bg-violet-100 text-sm md:text-base hover:bg-violet-200 transition-colors shadow-md shadow-gray-400">Log In</button>
+    </div>
+  </nav>
+  <!-- Sidebar Mobile - Hanya di mobile -->
+  <div id="mobile-menu" class="fixed top-0 left-0 w-64 h-full shadow-gray-700 bg-white shadow-md  rounded-br-2xl z-40 transform -translate-x-full transition-transform duration-300 ease-in-out pt-16 md:hidden">
+    <ul class="flex flex-col px-6 py-4 space-y-4">
+      <li><a href="#home" class="block py-2 hover:text-purple-600 transition-colors">Home</a></li>    
+      <!-- Category dengan dropdown di mobile -->
+      <li class="relative">
+        <button id="category-toggle" class="flex items-center justify-between w-full py-2 hover:text-purple-600 transition-colors">
+          <span>Category</span>
+          <svg id="category-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <ul id="category-dropdown" class="pl-4 hidden space-y-2 mt-2">
+          <li><a href="#special" class="block py-1 hover:text-purple-600 transition-colors">Special Benefit</a></li>
+          <li><a href="#featured" class="block py-1 hover:text-purple-600 transition-colors">Featured Restaurant</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="#services" class="block py-2 hover:text-purple-600 transition-colors">Services</a></li>
+      <li><a href="#about" class="block py-2 hover:text-purple-600 transition-colors">About us</a></li>
+    </ul>
+  </div>
+  <!-- Search Box Mobile -->
+  <div id="search-box" class="fixed top-16 left-0 right-0 bg-white shadow-md z-40 p-4 hidden md:hidden w-full">
+    <div class="flex items-center gap-2 w-full px-4">
+      <input type="text" id="mobile-search-input" placeholder="Search your favorite food..." class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-600 w-full">
+      <button id="mobile-search-button" class="bg-purple-600 text-white px-4 py-3 rounded-lg hover:bg-purple-700 whitespace-nowrap transition-colors">Search</button>
+    </div>
+  </div>
+  <!-- Search Box Desktop (untuk layar kecil desktop) -->
+  <div id="desktop-search-box" class="fixed top-18 right-4 bg-white z-40 p-4 hidden rounded-lg w-80 shadow-md shadow-gray-500">
+    <div class="flex items-center gap-2 w-full">
+      <input type="text" id="small-desktop-search-input" placeholder="Search your favorite food..." class="flex-1 border shadow-md rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-600 w-full">
+      <button id="small-desktop-search-button" class= " bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 whitespace-nowrap transition-colors">Search</button>
+    </div>
+  </div>
+  <!-- Overlay untuk menu mobile -->
+  <div id="overlay" class="fixed inset-0  bg-opacity-50 z-30 hidden md:hidden"></div>
+  <!-- Custom Alert Popup -->
+  <div id="search-alert" class="fixed top-20 right-4 bg-white border-l-4 border-purple-600 shadow-xl rounded-lg p-4 z-50 hidden transition-all duration-300 transform translate-x-full max-w-sm w-auto">
+    <div class="flex items-start">
+      <div class="flex-shrink-0">
+        <svg class="w-5 h-5 text-purple-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+        </svg>
+      </div>
+      <div class="ml-3 flex-1 min-w-0">
+        <h3 id="alert-title" class="text-sm font-medium text-gray-900">Hasil Pencarian</h3>
+        <p id="alert-message" class="text-sm text-gray-600 mt-1 break-words"></p>
+      </div>
+      <button id="close-alert" class="ml-2 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 flex-shrink-0">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
 
+   <!-- Hero Section -->
+  <section class="container relative ps-10 w-full h my-32" id="home">
+  <!-- Pembungkus Gambar -->
+  <div class="flex h-[564px] ps-10 w-full gap-6 flex-col md:flex-row">
+    <!-- Gambar 1 (80%) -->
+    <div class="basis-[80%] relative">
+      <img src="dist/image/1.png" 
+           class="w-full h-[564px] md:h-[564px] object-cover rounded-l-3xl md:rounded-3xl shadow-md shadow-gray-500" 
+           alt="Restaurant 1">
+    </div>
+    <!-- Gambar 2 (20%) saat mobile hilang -->
+    <div class="basis-[20%] relative">
+      <img src="dist/image/2.png" 
+           class="w-full hidden md:block md:h-[564px] object-cover rounded-l-3xl shadow-md shadow-gray-500" 
+           alt="Restaurant 2">
+    </div>
+  </div>
+  <!-- Kartu info -->
+   <div class="absolute md:pt-7 bg-white h-[180px] w-[220px] md:h-[220px] md:w-[280px] py-5 px-4 rounded-3xl 
+              top-1/2 -translate-y-1/2 left-10 shadow-md shadow-gray-500 ">
+    <!-- Rating -->
+    <div class="flex gap-2 items-center text-xs md:text-sm pb-1">
+      <p class="text-yellow-400">⭐⭐⭐⭐⭐</p>
+      <p class="text-yellow-400 font-semibold">5.0</p>
+      <p class="text-abu-abu">(5.2k+)</p>
+    </div>
+    <!-- nama Restoran-->  
+      <p class="text-sm font-semibold md:text-base pb-1">Padang Restaurant</p>
+      <p class="text-xs md:text-sm text-abu-abu">IDR 49.999 - IDR 560.000</p>
+    <!-- Lokasi Restaurant -->
+     <div class="flex gap-2 text-abu-abu items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" fill="none" class="mt-1 w-3 h-3 md:w-4 md:h-4"> 
+        <path fill-rule="evenodd" clip-rule="evenodd" 
+        d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" 
+        fill="currentColor"/> 
+      </svg>
+      <p class="text-[10px] md:text-xs pt-1">Padang, Indonesia</p>
+    </div>
+    <!--Tombol-->
+    <div class="flex items-center bg-button mt-3 rounded-md justify-center font-semibold gap-1 py-2 shadow-md shadow-gray-500">
+      <p>Make Reservation</p>
+       <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 arrow-right"fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+    <!-- info tambahan -->
+     <div class="flex items-center gap-1 mt-1 md:mt-2 text-abu-abu text-xs">
+         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_3_338" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2H21.9999V22H2V2Z"
+                fill="white" />
+            </mask>
+            <g mask="url(#mask0_3_338)">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.664 3.5C5.135 3.5 3.5 5.233 3.5 7.916V16.084C3.5 18.767 5.135 20.5 7.664 20.5H16.332C18.864 20.5 20.5 18.767 20.5 16.084V7.916C20.5 5.233 18.864 3.5 16.334 3.5H7.664ZM16.332 22H7.664C4.276 22 2 19.622 2 16.084V7.916C2 4.378 4.276 2 7.664 2H16.334C19.723 2 22 4.378 22 7.916V16.084C22 19.622 19.723 22 16.332 22Z"
+                fill="#656565" />
+            </g>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M11.994 16.75C11.58 16.75 11.244 16.414 11.244 16V12C11.244 11.586 11.58 11.25 11.994 11.25C12.408 11.25 12.744 11.586 12.744 12V16C12.744 16.414 12.408 16.75 11.994 16.75Z"
+              fill="#656565" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M11.9989 9.2041C11.4459 9.2041 10.9939 8.7571 10.9939 8.2041C10.9939 7.6511 11.4369 7.2041 11.9889 7.2041H11.9989C12.5519 7.2041 12.9989 7.6511 12.9989 8.2041C12.9989 8.7571 12.5519 9.2041 11.9989 9.2041Z"
+              fill="#656565" />
+            </svg>
+         <p>No extra cost</p>
+     </div>
+  </section>
 
-
-    
-    <!-- Benefit Section -->
-     <section class="container ps-14 mt-10 pe-6" id="special">
-        <div class="relative">
-          <div class="flex flex-col justify-center items-center mb-10">
-            <p class="font-semibold text-ungu">SPECIAL BENEFIT FOR YOU</p>
-            <h4 class="font-semibold text-[28px] pt-4 sm:text-2xl leading-normal">Why Should Choose Us?</h4>
+  <!-- Benefit Section -->
+  <section class="container mx-auto px-10 lg:px-4 py-12" id="special">
+    <!-- judul -->
+    <div class="flex flex-col items-center mb-12" >
+      <p class="text-base md:text-lg text-ungu mb-2 font-extralight text-shadow-md text-shadow-gray-300">Special Benefit For You</p>
+      <h4 class="text-xl md:text-2xl lg:text-3xl font-semibold text-shadow-md text-shadow-gray-50">Why Should Choose Us?</h4>
+    </div> 
+    <!-- pembungkus card -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <!-- Card 1 -->
+      <div class="flex flex-col items-center p-8 rounded-3xl inset-shadow-amber-500 inset-shadow-sm shadow-xl shadow-gray-300 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="w-20 h-20 flex items-center justify-center mb-6">
+          <svg width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="40" fill="#FDC886" fill-opacity="0.15"/>
+            <g transform="translate(11,11)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M49.2981 22.1013L51.0387 23.8413C52.4167 25.1946 53.1661 27.0313 53.1661 28.9646C53.1903 30.898 52.4409 32.7371 51.0871 34.1121C51.0709 34.1299 51.0548 34.1454 51.0387 34.161C51.0307 34.1688 51.0226 34.1766 51.0145 34.1846L49.2981 35.9005C48.6212 36.5771 48.2344 37.4955 48.2344 38.4646V40.9513C48.2344 44.963 44.9707 48.2279 40.9575 48.2279H38.4675C37.5005 48.2279 36.5818 48.6121 35.9049 49.2888L34.1643 51.0288C32.7379 52.4571 30.8764 53.1555 29.0149 53.1555C27.1534 53.1555 25.2919 52.4571 23.8655 51.0554L22.1007 49.2888C21.4238 48.6121 20.5051 48.2279 19.5381 48.2279H17.048C13.0349 48.2279 9.77124 44.963 9.77124 40.9513V38.4646C9.77124 37.4955 9.38444 36.5771 8.70753 35.8763L6.96689 34.1605C4.13837 31.3354 4.11419 26.7171 6.94272 23.8679L8.70753 22.1013C9.38444 21.4246 9.77124 20.5063 9.77124 19.5155V17.0505C9.77124 13.0388 13.0349 9.77873 17.048 9.77873H19.5381C20.5051 9.77873 21.4238 9.38964 22.1007 8.71298L23.8413 6.97298C26.6699 4.12373 31.2874 4.12373 34.1401 6.95123L35.9049 8.71298C36.5818 9.38964 37.5005 9.77873 38.4675 9.77873H40.9575C44.9707 9.77873 48.2344 13.0388 48.2344 17.0505V19.5421C48.2344 20.5063 48.6212 21.4246 49.2981 22.1013ZM22.7776 37.3264C23.3578 37.3264 23.8897 37.1089 24.2765 36.698L36.7027 24.2788C37.5246 23.4571 37.5246 22.1014 36.7027 21.2797C35.8807 20.4604 34.551 20.4604 33.7291 21.2797L21.3029 33.7014C20.4809 34.523 20.4809 35.8764 21.3029 36.698C21.6897 37.1089 22.2216 37.3264 22.7776 37.3264ZM33.1008 35.1996C33.1008 36.3838 34.0437 37.3263 35.2283 37.3263C36.3887 37.3263 37.3315 36.3838 37.3315 35.1996C37.3315 34.042 36.3887 33.0971 35.2283 33.0971C34.0437 33.0971 33.1008 34.042 33.1008 35.1996ZM22.8019 20.6754C23.9624 20.6754 24.9052 21.6179 24.9052 22.7779C24.9052 23.9645 23.9624 24.9046 22.8019 24.9046C21.6415 24.9046 20.6745 23.9645 20.6745 22.7779C20.6745 21.6179 21.6415 20.6754 22.8019 20.6754Z" fill="#FDC886"/>
+            </g>
+          </svg>
+        </div>
+        <h4 class="text-base md:text-lg lg:text-xl font-semibold mb-4 text-gray-800">Extra Discounts</h4>
+        <p class="text-center text-abu-abu mb-6 leading-relaxed max-w-[200px] lg:text-base">Get your special discount by using our reservation</p>
+        <button class="flex whitespace-nowrap items-center bg-button hover:bg-amber-600 text-black px-6 py-3.5 rounded-lg font-semibold transition-colors duration-300 shadow-md shadow-gray-400">
+          <span>Make Reservation</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>    
+      <!-- Card 2 -->
+      <div class="flex flex-col items-center p-8 rounded-3xl inset-shadow-amber-500 inset-shadow-sm  shadow-xl shadow-gray-300 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="w-20 h-20 flex items-center justify-center mb-6">
+          <svg width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="40" fill="#FDC886" fill-opacity="0.2"/>
+            <g transform="translate(11,11)">
+              <path d="M11.4427 46.5042C9.9523 45.0138 9.9523 42.5973 11.4427 41.1069L31.5328 21.0168L36.9302 26.4141L16.8401 46.5042C15.3496 47.9946 12.9332 47.9946 11.4427 46.5042Z" fill="#FDC886"/>
+              <path d="M30.9332 20.4172C30.2708 19.7548 30.2708 18.6808 30.9332 18.0184L35.7308 13.2207L44.7264 22.2163L39.9288 27.0139C39.2663 27.6764 38.1924 27.6764 37.5299 27.0139L30.9332 20.4172Z" fill="#FDC886"/>
+              <rect x="33.3319" y="15.6196" width="11.0254" height="2.54433" transform="rotate(-45 33.3319 15.6196)" fill="#FDC886"/>
+              <rect x="36.9302" y="19.2178" width="11.0254" height="2.54433" transform="rotate(-45 36.9302 19.2178)" fill="#FDC886"/>
+              <rect x="40.5284" y="22.816" width="11.0254" height="2.54433" transform="rotate(-45 40.5284 22.816)" fill="#FDC886"/>
+              <path d="M13.7541 6.47561L48.4726 41.7532C50.35 43.661 50.2316 46.7563 48.2142 48.5155C46.303 50.1816 43.4089 50.0089 41.7101 48.1267L29.5348 34.6345L28.7433 35.3884L27.8217 36.2651L26.945 35.3436L14.1302 21.8745C8.66923 16.1343 10.225 9.438 11.738 6.74479L12.567 5.26987L13.7541 6.47561Z" fill="#FDC886" stroke="#FFF4E7" stroke-width="2.54433"/>
+            </g>
+          </svg>
+        </div>
+        <h4 class="text-base md:text-lg lg:text-xl font-semibold mb-4 text-gray-800">Come and Eat</h4>
+        <p class="text-center text-gray-600 mb-6 leading-relaxed  max-w-[200px] lg:text-base">Get your own table quickly & without waiting in line</p>
+        <button class="flex whitespace-nowrap items-center bg-button text-black hover:bg-amber-600  px-6 py-3.5 rounded-lg font-semibold transition-colors duration-300 shadow-md shadow-gray-400">
+          <span>Make Reservation</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+      <!-- Card 3 -->
+      <div class="flex flex-col items-center p-8 rounded-3xl inset-shadow-amber-500 inset-shadow-sm shadow-xl shadow-gray-300 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="w-20 h-20 flex items-center justify-center mb-6">
+          <svg width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="40" fill="#FDC886" fill-opacity="0.2"/>
+            <g transform="translate(21,19)">
+              <path d="M10.355 1.82222C10.355 0.815835 11.1709 0 12.1772 0H19.4661C20.4725 0 21.2884 0.815837 21.2884 1.82222V2.73334C21.2884 5.2493 19.2488 7.28889 16.7328 7.28889H14.9106C12.3946 7.28889 10.355 5.2493 10.355 2.73333V1.82222Z" fill="#FDC886"/>
+              <path d="M9.29938 11.448C9.95391 10.5356 11.0115 10.0222 12.1344 10.0222H19.509C20.6319 10.0222 21.6895 10.5356 22.344 11.448C24.5301 14.4955 29.43 21.8497 30.3995 27.7889C30.7804 30.1224 31.1832 31.9719 30.661 33.8605C29.7371 37.2017 25.7376 38.2667 22.271 38.2667H9.37234C5.90578 38.2667 1.90624 37.2017 0.982421 33.8605C0.460228 31.9719 0.862993 30.1224 1.24391 27.7889C2.21341 21.8497 7.11328 14.4955 9.29938 11.448Z" fill="#FDC886"/>
+              <path d="M16.4413 32.104C16.1255 32.104 15.8643 31.9946 15.6578 31.776C15.4513 31.5695 15.348 31.3143 15.348 31.0106V29.9355C14.6434 29.8869 14.0178 29.7776 13.4711 29.6075C12.9366 29.4253 12.481 29.237 12.1044 29.0426C11.7643 28.8726 11.5517 28.6357 11.4667 28.332C11.3816 28.0161 11.3938 27.7185 11.5031 27.4391C11.6246 27.1475 11.819 26.941 12.0862 26.8195C12.3656 26.6859 12.6936 26.7102 13.0702 26.8924C13.3618 27.0503 13.7687 27.2143 14.2911 27.3844C14.8135 27.5423 15.4513 27.6213 16.2044 27.6213C17.0427 27.6213 17.6379 27.4877 17.9902 27.2204C18.3425 26.9532 18.5187 26.6191 18.5187 26.2182C18.5187 25.8902 18.3972 25.6169 18.1542 25.3982C17.9113 25.1795 17.4739 25.0034 16.8422 24.8698L14.8378 24.4324C12.6268 23.9465 11.5213 22.7681 11.5213 20.8973C11.5213 19.8769 11.8676 19.0143 12.56 18.3098C13.2524 17.6052 14.1818 17.1618 15.348 16.9795V15.8315C15.348 15.5278 15.4513 15.2727 15.6578 15.0662C15.8643 14.8475 16.1255 14.7382 16.4413 14.7382C16.745 14.7382 17.0002 14.8475 17.2067 15.0662C17.4132 15.2727 17.5164 15.5278 17.5164 15.8315V16.9249C17.9659 16.9856 18.4276 17.0949 18.9013 17.2529C19.3873 17.4108 19.8124 17.6173 20.1769 17.8724C20.4684 18.0546 20.6446 18.2915 20.7053 18.5831C20.7782 18.8625 20.7539 19.1298 20.6324 19.3849C20.511 19.64 20.3105 19.8222 20.0311 19.9315C19.7639 20.0287 19.4359 19.9801 19.0471 19.7858C18.7191 19.6278 18.3607 19.4942 17.972 19.3849C17.5833 19.2755 17.1034 19.2209 16.5324 19.2209C15.8279 19.2209 15.2751 19.3666 14.8742 19.6582C14.4733 19.9498 14.2729 20.3263 14.2729 20.788C14.2729 21.116 14.3883 21.3893 14.6191 21.608C14.8621 21.8145 15.2812 21.9846 15.8764 22.1182L17.8991 22.5555C19.0532 22.8106 19.9036 23.2298 20.4502 23.8129C21.009 24.3838 21.2884 25.1188 21.2884 26.0178C21.2884 27.0503 20.9362 27.9007 20.2316 28.5689C19.5391 29.237 18.6341 29.6683 17.5164 29.8626V31.0106C17.5164 31.3143 17.4132 31.5695 17.2067 31.776C17.0002 31.9946 16.745 32.104 16.4413 32.104Z" fill="#FFF4E7"/>
+              <circle cx="28.9778" cy="33.7111" r="6.37778" fill="#FDC886" stroke="#FFF4E7" stroke-width="1.82222"/>
+              <rect x="27.533" y="30.9778" width="5.46667" height="1.82222" rx="0.911111" transform="rotate(45 27.533 30.9778)" fill="#FFF4E7"/>
+              <rect x="26.2445" y="34.8433" width="5.46667" height="1.82222" rx="0.911111" transform="rotate(-45 26.2445 34.8433)" fill="#FFF4E7"/>
+            </g>
+          </svg>
+        </div>
+        <h4 class="text-base md:text-lg lg:text-xl font-semibold mb-4 text-gray-800">No Extra Fee</h4>
+        <p class="text-center text-gray-600 mb-6  lg:mb-0 xl:mb-6  leading-relaxed  max-w-[200px] lg:text-base">Get tax free if you want to order food and make a reservation</p>
+        <button class="flex items-center whitespace-nowrap bg-button hover:bg-amber-600 text-black px-6 py-3.5 rounded-lg font-semibold transition-colors duration-300 shadow-md shadow-gray-400">
+          <span>Make Reservation</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+      <!-- Card 4 -->
+      <div class="flex flex-col items-center p-8 rounded-3xl inset-shadow-amber-500 inset-shadow-sm shadow-xl shadow-gray-300 bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="w-20 h-20 flex items-center justify-center mb-6 lg:mb-2">
+          <div class="relative w-full h-full flex items-center justify-center">
+            <div class="absolute inset-0 bg-[#FFF6E5] rounded-full blur-md"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58" fill="none" class="relative z-10">
+              <path d="M21.9457 24.6294C22.2489 23.7652 23.8949 23.7652 24.1982 24.6294C24.923 26.6946 26.0047 29.0867 27.4636 30.5457C28.9225 32.0046 31.3147 33.0863 33.3799 33.8111C34.244 34.1144 34.244 35.7603 33.3799 36.0636C31.3147 36.7884 28.9225 37.8701 27.4636 39.329C26.0047 40.7879 24.923 43.1801 24.1982 45.2453C23.8949 46.1094 22.2489 46.1094 21.9457 45.2453C21.2209 43.1801 20.1392 40.7879 18.6803 39.329C17.2213 37.8701 14.8292 36.7884 12.764 36.0636C11.8998 35.7603 11.8998 34.1144 12.764 33.8111C14.8292 33.0863 17.2213 32.0046 18.6803 30.5457C20.1392 29.0867 21.2209 26.6946 21.9457 24.6294Z" fill="#FDC886"/>
+              <path d="M40.1277 33.5858C40.2715 33.151 41.0765 33.151 41.2203 33.5858C41.6403 34.8558 42.307 36.4331 43.2358 37.362C44.1646 38.2908 45.7419 38.9575 47.012 39.3775C47.4467 39.5213 47.4467 40.3262 47.012 40.47C45.7419 40.89 44.1646 41.5567 43.2358 42.4856C42.307 43.4144 41.6403 44.9917 41.2203 46.2617C41.0765 46.6965 40.2715 46.6965 40.1277 46.2617C39.7077 44.9917 39.041 43.4144 38.1122 42.4856C37.1834 41.5567 35.6061 40.89 34.3361 40.47C33.9013 40.3262 33.9013 39.5213 34.3361 39.3775C35.6061 38.9575 37.1834 38.2908 38.1122 37.362C39.041 36.4331 39.7077 34.8558 40.1277 33.5858Z" fill="#FDC886"/>
+              <path d="M16.5786 11.7188C16.7224 11.284 17.5274 11.284 17.6712 11.7188C18.0912 12.9888 18.7579 14.5661 19.6867 15.495C20.6155 16.4238 22.1928 17.0905 23.4629 17.5105C23.8976 17.6543 23.8976 18.4592 23.4629 18.603C22.1928 19.023 20.6155 19.6897 19.6867 20.6186C18.7579 21.5474 18.0912 23.1247 17.6712 24.3947C17.5274 24.8295 16.7224 24.8295 16.5786 24.3947C16.1586 23.1247 15.4919 21.5474 14.5631 20.6186C13.6343 19.6897 12.057 19.023 10.787 18.603C10.3522 18.4592 10.3522 17.6543 10.787 17.5105C12.057 17.0905 13.6343 16.4238 14.5631 15.495C15.4919 14.5661 16.1586 12.9888 16.5786 11.7188Z" fill="#FDC886"/>
+              <path d="M35.1159 13.67C35.4601 12.8213 37.1893 12.8213 37.5335 13.67C38.0539 14.9528 38.7463 16.2697 39.6184 17.1418C40.4906 18.014 41.8074 18.7064 43.0903 19.2267C43.939 19.571 43.939 21.3002 43.0903 21.6444C41.8074 22.1648 40.4906 22.8572 39.6184 23.7293C38.7463 24.6015 38.0539 25.9183 37.5335 27.2012C37.1893 28.0499 35.4601 28.0499 35.1159 27.2012C34.5955 25.9183 33.9031 24.6015 33.0309 23.7293C32.1588 22.8572 30.8419 22.1648 29.5591 21.6444C28.7104 21.3002 28.7104 19.571 29.5591 19.2267C30.8419 18.7064 32.1588 18.014 33.0309 17.1418C33.9031 16.2697 34.5955 14.9528 35.1159 13.67Z" fill="#FDC886"/>
+            </svg>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Kartu 1 -->
-            <div class="flex flex-col items-center text-center ">
-              <div class="pt-4">
-                <div class="bg-image-oren  bg-cover max-w-md mx-auto p-4 rounded-full shadow-md ">
-                  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M45.2981 18.1013L47.0387 19.8413C48.4167 21.1946 49.1661 23.0313 49.1661 24.9646C49.1903 26.898 48.4409 28.7371 47.0871 30.1121C47.0709 30.1299 47.0548 30.1454 47.0387 30.161C47.0307 30.1688 47.0226 30.1766 47.0145 30.1846L45.2981 31.9005C44.6212 32.5771 44.2344 33.4955 44.2344 34.4646V36.9513C44.2344 40.963 40.9707 44.2279 36.9575 44.2279H34.4675C33.5005 44.2279 32.5818 44.6121 31.9049 45.2888L30.1643 47.0288C28.7379 48.4571 26.8764 49.1555 25.0149 49.1555C23.1534 49.1555 21.2919 48.4571 19.8655 47.0554L18.1007 45.2888C17.4238 44.6121 16.5051 44.2279 15.5381 44.2279H13.048C9.03493 44.2279 5.77124 40.963 5.77124 36.9513V34.4646C5.77124 33.4955 5.38444 32.5771 4.70753 31.8763L2.96689 30.1605C0.138369 27.3354 0.114194 22.7171 2.94272 19.8679L4.70753 18.1013C5.38444 17.4246 5.77124 16.5063 5.77124 15.5155V13.0505C5.77124 9.03881 9.03493 5.77873 13.048 5.77873H15.5381C16.5051 5.77873 17.4238 5.38964 18.1007 4.71298L19.8413 2.97298C22.6699 0.123727 27.2874 0.123727 30.1401 2.95123L31.9049 4.71298C32.5818 5.38964 33.5005 5.77873 34.4675 5.77873H36.9575C40.9707 5.77873 44.2344 9.03881 44.2344 13.0505V15.5421C44.2344 16.5063 44.6212 17.4246 45.2981 18.1013ZM18.7776 33.3264C19.3578 33.3264 19.8897 33.1089 20.2765 32.698L32.7027 20.2788C33.5246 19.4571 33.5246 18.1014 32.7027 17.2797C31.8807 16.4604 30.551 16.4604 29.7291 17.2797L17.3029 29.7014C16.4809 30.523 16.4809 31.8764 17.3029 32.698C17.6897 33.1089 18.2216 33.3264 18.7776 33.3264ZM29.1008 31.1996C29.1008 32.3838 30.0437 33.3263 31.2283 33.3263C32.3887 33.3263 33.3315 32.3838 33.3315 31.1996C33.3315 30.042 32.3887 29.0971 31.2283 29.0971C30.0437 29.0971 29.1008 30.042 29.1008 31.1996ZM18.8019 16.6754C19.9624 16.6754 20.9052 17.6179 20.9052 18.7779C20.9052 19.9645 19.9624 20.9046 18.8019 20.9046C17.6415 20.9046 16.6745 19.9645 16.6745 18.7779C16.6745 17.6179 17.6415 16.6754 18.8019 16.6754Z" fill="#FDC886"/>
-              </svg>
-                </div>
-              </div>
-              <h4 class="py-4 font-semibold text-[18px]">Extra Discounts</h4>
-              <p class=" px-4 text-abu-abu ">Get your special discount by using our reservation</p>
-            <button class="flex items-center justify-center bg-button w-full h-full mt-8 py-3 rounded-t-lg rounded-b-xl hover:text-amber-600">
-              <span class="font-semibold">View Details</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                 </svg>
-            </button>
-            </div>
-            <!-- Kartu 2 -->
-             <div class="flex flex-col  items-center text-center">
-              <div class="pt-4">
-                <div class="bg-image-oren  bg-cover max-w-md mx-auto p-4 rounded-full shadow-md ">
-                  <svg width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.44274 43.5042C3.9523 42.0138 3.9523 39.5973 5.44274 38.1069L25.5328 18.0168L30.9302 23.4141L10.8401 43.5042C9.34964 44.9946 6.93317 44.9946 5.44274 43.5042Z" fill="#FDC886"/>
-                    <path d="M24.9332 17.4172C24.2708 16.7548 24.2708 15.6808 24.9332 15.0184L29.7308 10.2207L38.7264 19.2163L33.9288 24.0139C33.2663 24.6764 32.1924 24.6764 31.5299 24.0139L24.9332 17.4172Z" fill="#FDC886"/>
-                    <rect x="27.3319" y="12.6196" width="11.0254" height="2.54433" transform="rotate(-45 27.3319 12.6196)" fill="#FDC886"/>
-                    <rect x="30.9302" y="16.2178" width="11.0254" height="2.54433" transform="rotate(-45 30.9302 16.2178)" fill="#FDC886"/>
-                    <rect x="34.5284" y="19.816" width="11.0254" height="2.54433" transform="rotate(-45 34.5284 19.816)" fill="#FDC886"/>
-                    <path d="M7.75409 3.47561L42.4726 38.7532C44.35 40.661 44.2316 43.7563 42.2142 45.5155C40.303 47.1816 37.4089 47.0089 35.7101 45.1267L23.5348 31.6345L22.7433 32.3884L21.8217 33.2651L20.945 32.3436L8.13021 18.8745C2.66923 13.1343 4.22504 6.438 5.73797 3.74479L6.56698 2.26987L7.75409 3.47561Z" fill="#FDC886" stroke="#FFF4E7" stroke-width="2.54433"/>
-                    </svg>
-                </div>
-              </div>
-              <h4 class="py-4 font-semibold text-[18px]">Come and Eat</h4>
-              <p class=" px-4 text-abu-abu ">Get your special discount by using our reservation</p>
-              <button class="flex items-center justify-center bg-button w-full h-full mt-8 py-3 rounded-t-lg rounded-b-xl hover:text-amber-600">
-              <span class="font-semibold">View Details</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                 </svg>
-            </button>
-            </div>
-            <!-- Kartu 3 -->
-             <div class="flex flex-col  items-center text-center">
-              <div class="pt-4">
-                <div class="bg-image-oren  bg-cover max-w-md mx-auto p-4 rounded-full shadow-md ">
-                  <svg width="46" height="48" viewBox="0 0 37 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.355 1.82222C10.355 0.815835 11.1709 0 12.1772 0H19.4661C20.4725 0 21.2884 0.815837 21.2884 1.82222V2.73334C21.2884 5.2493 19.2488 7.28889 16.7328 7.28889H14.9106C12.3946 7.28889 10.355 5.2493 10.355 2.73333V1.82222Z" fill="#FDC886"/>
-                  <path d="M9.29938 11.448C9.95391 10.5356 11.0115 10.0222 12.1344 10.0222H19.509C20.6319 10.0222 21.6895 10.5356 22.344 11.448C24.5301 14.4955 29.43 21.8497 30.3995 27.7889C30.7804 30.1224 31.1832 31.9719 30.661 33.8605C29.7371 37.2017 25.7376 38.2667 22.271 38.2667H9.37234C5.90578 38.2667 1.90624 37.2017 0.982421 33.8605C0.460228 31.9719 0.862993 30.1224 1.24391 27.7889C2.21341 21.8497 7.11328 14.4955 9.29938 11.448Z" fill="#FDC886"/>
-                  <path d="M16.4413 32.104C16.1255 32.104 15.8643 31.9946 15.6578 31.776C15.4513 31.5695 15.348 31.3143 15.348 31.0106V29.9355C14.6434 29.8869 14.0178 29.7776 13.4711 29.6075C12.9366 29.4253 12.481 29.237 12.1044 29.0426C11.7643 28.8726 11.5517 28.6357 11.4667 28.332C11.3816 28.0161 11.3938 27.7185 11.5031 27.4391C11.6246 27.1475 11.819 26.941 12.0862 26.8195C12.3656 26.6859 12.6936 26.7102 13.0702 26.8924C13.3618 27.0503 13.7687 27.2143 14.2911 27.3844C14.8135 27.5423 15.4513 27.6213 16.2044 27.6213C17.0427 27.6213 17.6379 27.4877 17.9902 27.2204C18.3425 26.9532 18.5187 26.6191 18.5187 26.2182C18.5187 25.8902 18.3972 25.6169 18.1542 25.3982C17.9113 25.1795 17.4739 25.0034 16.8422 24.8698L14.8378 24.4324C12.6268 23.9465 11.5213 22.7681 11.5213 20.8973C11.5213 19.8769 11.8676 19.0143 12.56 18.3098C13.2524 17.6052 14.1818 17.1618 15.348 16.9795V15.8315C15.348 15.5278 15.4513 15.2727 15.6578 15.0662C15.8643 14.8475 16.1255 14.7382 16.4413 14.7382C16.745 14.7382 17.0002 14.8475 17.2067 15.0662C17.4132 15.2727 17.5164 15.5278 17.5164 15.8315V16.9249C17.9659 16.9856 18.4276 17.0949 18.9013 17.2529C19.3873 17.4108 19.8124 17.6173 20.1769 17.8724C20.4684 18.0546 20.6446 18.2915 20.7053 18.5831C20.7782 18.8625 20.7539 19.1298 20.6324 19.3849C20.511 19.64 20.3105 19.8222 20.0311 19.9315C19.7639 20.0287 19.4359 19.9801 19.0471 19.7858C18.7191 19.6278 18.3607 19.4942 17.972 19.3849C17.5833 19.2755 17.1034 19.2209 16.5324 19.2209C15.8279 19.2209 15.2751 19.3666 14.8742 19.6582C14.4733 19.9498 14.2729 20.3263 14.2729 20.788C14.2729 21.116 14.3883 21.3893 14.6191 21.608C14.8621 21.8145 15.2812 21.9846 15.8764 22.1182L17.8991 22.5555C19.0532 22.8106 19.9036 23.2298 20.4502 23.8129C21.009 24.3838 21.2884 25.1188 21.2884 26.0178C21.2884 27.0503 20.9362 27.9007 20.2316 28.5689C19.5391 29.237 18.6341 29.6683 17.5164 29.8626V31.0106C17.5164 31.3143 17.4132 31.5695 17.2067 31.776C17.0002 31.9946 16.745 32.104 16.4413 32.104Z" fill="#FFF4E7"/>
-                  <circle cx="28.9778" cy="33.7111" r="6.37778" fill="#FDC886" stroke="#FFF4E7" stroke-width="1.82222"/>
-                  <rect x="27.533" y="30.9778" width="5.46667" height="1.82222" rx="0.911111" transform="rotate(45 27.533 30.9778)" fill="#FFF4E7"/>
-                  <rect x="26.2445" y="34.8433" width="5.46667" height="1.82222" rx="0.911111" transform="rotate(-45 26.2445 34.8433)" fill="#FFF4E7"/>
-                  </svg>
-                </div>
-              </div>
-              <h4 class="py-4 font-semibold text-[18px]">No Extra Fee</h4>
-              <p class=" px-4 text-abu-abu ">Get tax free if you want to order food and make a reservation</p>
-              <button class="flex items-center justify-center bg-button w-full h-full mt-4 py-3 rounded-t-lg rounded-b-xl hover:text-amber-600">
-              <span class="font-semibold">View Details</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                 </svg>
-            </button>
-            </div>
-            <!-- Kartu 4 -->
-             <div class="flex flex-col  items-center text-center">
-              <div class="pt-4">
-                <div class="bg-image-oren  bg-cover max-w-md mx-auto p-4 rounded-full shadow-md">
-                  <svg width="46" height="48" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13.9457 15.6294C14.2489 14.7652 15.8949 14.7652 16.1982 15.6294C16.923 17.6946 18.0047 20.0867 19.4636 21.5457C20.9225 23.0046 23.3147 24.0863 25.3799 24.8111C26.244 25.1144 26.244 26.7603 25.3799 27.0636C23.3147 27.7884 20.9225 28.8701 19.4636 30.329C18.0047 31.7879 16.923 34.1801 16.1982 36.2453C15.8949 37.1094 14.2489 37.1094 13.9457 36.2453C13.2209 34.1801 12.1392 31.7879 10.6803 30.329C9.22133 28.8701 6.82917 27.7884 4.76399 27.0636C3.89982 26.7603 3.89982 25.1144 4.76399 24.8111C6.82917 24.0863 9.22133 23.0046 10.6803 21.5457C12.1392 20.0867 13.2209 17.6946 13.9457 15.6294Z" fill="#FDC886"/>
-                  <path d="M32.1277 24.5858C32.2715 24.151 33.0765 24.151 33.2203 24.5858C33.6403 25.8558 34.307 27.4331 35.2358 28.362C36.1646 29.2908 37.7419 29.9575 39.012 30.3775C39.4467 30.5213 39.4467 31.3262 39.012 31.47C37.7419 31.89 36.1646 32.5567 35.2358 33.4856C34.307 34.4144 33.6403 35.9917 33.2203 37.2617C33.0765 37.6965 32.2715 37.6965 32.1277 37.2617C31.7077 35.9917 31.041 34.4144 30.1122 33.4856C29.1834 32.5567 27.6061 31.89 26.3361 31.47C25.9013 31.3262 25.9013 30.5213 26.3361 30.3775C27.6061 29.9575 29.1834 29.2908 30.1122 28.362C31.041 27.4331 31.7077 25.8558 32.1277 24.5858Z" fill="#FDC886"/>
-                  <path d="M8.57864 2.7188C8.72242 2.28404 9.52739 2.28404 9.67117 2.7188C10.0912 3.98884 10.7579 5.56612 11.6867 6.49495C12.6155 7.42379 14.1928 8.09048 15.4629 8.51049C15.8976 8.65427 15.8976 9.45924 15.4629 9.60302C14.1928 10.023 12.6155 10.6897 11.6867 11.6186C10.7579 12.5474 10.0912 14.1247 9.67117 15.3947C9.52739 15.8295 8.72242 15.8295 8.57864 15.3947C8.15863 14.1247 7.49194 12.5474 6.56311 11.6186C5.63427 10.6897 4.05699 10.023 2.78695 9.60302C2.35219 9.45924 2.35219 8.65427 2.78695 8.51049C4.05699 8.09048 5.63427 7.42379 6.5631 6.49495C7.49194 5.56612 8.15863 3.98884 8.57864 2.7188Z" fill="#FDC886"/>
-                  <path d="M27.1159 4.66996C27.4601 3.82128 29.1893 3.82128 29.5335 4.66996C30.0539 5.95284 30.7463 7.26967 31.6184 8.14183C32.4906 9.01398 33.8074 9.70638 35.0903 10.2267C35.939 10.571 35.939 12.3002 35.0903 12.6444C33.8074 13.1648 32.4906 13.8572 31.6184 14.7293C30.7463 15.6015 30.0539 16.9183 29.5335 18.2012C29.1893 19.0499 27.4601 19.0499 27.1159 18.2012C26.5955 16.9183 25.9031 15.6015 25.0309 14.7293C24.1588 13.8572 22.8419 13.1648 21.5591 12.6444C20.7104 12.3002 20.7104 10.571 21.5591 10.2267C22.8419 9.70638 24.1588 9.01398 25.0309 8.14183C25.9031 7.26967 26.5955 5.95284 27.1159 4.66996Z" fill="#FDC886"/>
-                  </svg>
-                </div>
-              </div>
-              <h4 class="py-4 font-semibold text-[18px]">Guaranteed Cleanliness</h4>
-              <p class=" px-4 text-abu-abu ">We ensure the cleanliness of the place as well as the food</p>
-              <button class="flex items-center justify-center bg-button w-full h-full mt-8 py-3 rounded-t-lg rounded-b-xl hover:text-amber-600">
-              <span class="font-semibold">View Details</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                 </svg>
-            </button>
-            </div>
-          </div>
-     </section>
+        </div>
+        <h4 class="text-base md:text-lg lg:text-xl text-center font-semibold mb-4 lg:mb-1 text-gray-800">Guaranteed Cleanliness</h4>
+        <p class="text-center text-gray-600 mb-6 lg:mb-0 xl:mb-6 leading-relaxed  max-w-[200px] lg:text-base">We ensure the cleanliness of the place as well as the food</p>
+        <button class="whitespace-nowrap flex items-center bg-button hover:bg-amber-600 text-black px-6 py-3.5 rounded-lg font-semibold transition-colors duration-300 shadow-md shadow-gray-400">
+          <span>Make Reservation</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
 
-     <!-- Featured Section -->
-      <section class="container ps-14 mt-40 pe-6" id="featured">
+  <!-- Featured Section -->
+    <section class="container px-10 mx-auto mt-40 lg:px-4" id="featured">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           <!-- Kalimat -->
             <div class="flex flex-col justify-center">
-                <p class="text-ungu text-base mb-2">Top 3 Featured Restaurant</p>
-                <h4 class="text-[28px] mb-8 font-semibold leading-normal">Most Popular Restaurants</h4>
+                <p class="text-ungu text-base mb-2 font-extralight text-shadow-md text-shadow-gray-300 md:text-lg">Top 3 Featured Restaurant</p>
+                <h4 class="text-xl mb-2 md:text-2xl lg:text-3xl font-semibold text-shadow-md text-shadow-gray-50 leading-normal">Most Popular Restaurants</h4>
                 <p class="mb-9 font-normal leading-normal text-abu-abu">The best restaurant in our opinion is how much customers like it in terms of place, price, comfort and of course the taste of the food itself.</p>
-              <button class="py-3.5 px-3.5 bg-button rounded-xl mt-4 mb-2 flex items-center w-[220px] justify-center text-normal font-semibold hover:text-amber-600">
+              <button class="py-3.5 px-3.5 shadow-md shadow-gray-400 bg-button rounded-xl mt-4 mb-2 flex items-center w-[220px] justify-center text-normal font-semibold hover:text-amber-600">
                 View All Restaurant
                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -301,15 +329,15 @@
             </div>
            <!-- card 1 -->           
              <div class="relative">
-                <img src="dist/image/3.png" alt="" class= "w-full h-[475px] object-cover rounded-3xl">
-                <div class="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-2xl ">
-                  <div class="flex mb-1 text-base">
+                <img src="dist/image/3.png" alt="" class= "w-full object-cover rounded-3xl shadow-xl shadow-gray-400 h-[600px] md:h-[800px] lg:h-[475px]">
+                <div class="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-2xl justify-center shadow-md shadow-gray-300">
+                  <div class="flex mb-1 text-base gap-2">
                     <p class="text-yellow-400">⭐5.0</p>
                     <p class="text-abu-abu">(7.6K+)</p>
                   </div>
-                  <div class="flex items-center mb-1 justify-between">
+                  <div class="flex items-center justify-between">
                   <p class=" font-semibold">Bind Balorant</p>
-                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svgc" class=" bg-button rounded-xl h-[30px] w-[30px]">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svgc" class=" bg-button rounded-xl h-[30px] w-[30px] absoulute">
                     <g id="Iconly/Light-outline/Arrow - Right">
                     <g id="Arrow - Right">
                     <path id="Arrow - Right_2" fill-rule="evenodd" clip-rule="evenodd" d="M6.47144 11.9514C6.2052 11.9881 6 12.2197 6 12.4999C6 12.8056 6.24421 13.0535 6.54545 13.0535H16.1333L12.6698 16.5542L12.6169 16.6162C12.458 16.8326 12.475 17.1401 12.6682 17.3371C12.8808 17.5537 13.2262 17.5544 13.4396 17.3387L17.8331 12.8984C17.8547 12.8773 17.8746 12.8544 17.8925 12.8299L17.8927 12.8297C18.0519 12.6126 18.0342 12.3041 17.8396 12.1074L13.4396 7.66129L13.3783 7.60782C13.1644 7.4475 12.8614 7.46603 12.6682 7.66297C12.4557 7.87961 12.4564 8.2301 12.6699 8.4458L16.1342 11.9464H6.54545L6.47144 11.9514Z" fill="#232631"/>
@@ -326,46 +354,70 @@
                 </div>          
              </div>
              <!-- card 2 dan 3 -->
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-6">
              <!-- card 2 -->
                 <div class="relative ">
-                <img src="dist/image/4.png" alt="" class="w-full h-[475px] rounded-3xl">               
+                <img src="dist/image/4.png" alt="" class="w-full h-[600px] md:h-[800px] lg:h-[475px] rounded-3xl shadow-xl shadow-gray-400">               
                 </div>
              <!-- card 3 -->
                 <div class="relative ">
-                  <img src="dist/image/5.png" alt="" class="w-full h-[475px] rounded-3xl">
+                  <img src="dist/image/5.png" alt="" class="ring-1 ring-gray-500 w-full h-[600px] md:h-[800px] lg:h-[475px] rounded-3xl md:rounded-r-2xl shadow-xl shadow-gray-400">
                 </div>
               </div>
         </div>
-      </section>
-
-      <!-- Services -->
-       <section class="container ps-14 mt-40 pe-6" id="services">
+    </section>
+    
+    <!-- Services -->
+    <section class="container px-14 mt-45 mx-auto lg:px-6" id="services">
           <!-- Kalimat -->
-           <div class="flex justify-between pb-10 ">
+           <div class="grid grid-cols-1 md:grid-cols-2 pb-10">
             <!-- kiri -->
             <div class="flex-col"> 
-              <p  class="text-ungu font-light mb-3 text-base">Restaurant Based By City</p>
-              <h3 class="text-[28px] font-semibold leading-normal">Restaurant Near You</h3>
+              <p  class="text-ungu mb-3 text-base font-extralight text-shadow-md text-shadow-gray-300 md:text-lg">Restaurant Based By City</p>
+              <h3 class="text-xl mb-2 md:text-2xl lg:text-3xl font-semibold text-shadow-md text-shadow-gray-50 leading-normal">Restaurant Near You</h3>
             </div>
             <!-- kanan -->
-            <div class=" flex space-x-2 bg-[#F2F2F2] items-center py-3 "> 
-              <svg width="10" height="15" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg " class="md:w-[18px] md:h-[20px]"> 
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="#656565"/>
-              </svg> 
-              <p class="text-[10px] md:text-[18px] leading-2 ">Jakarta, Indonesia</p>
-              <svg id="category-icon" width="10" height="15" xmlns="http://www.w3.org/2000/svg" class="md:w-[18px] md:h-[20px] transform transition-transformm" fill="none" viewBox="0 0 24 24" stroke="currentColor"> 
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /> 
-              </svg> 
-            </div>
+             <!-- Overlay putih transparan -->
+            <div id="overlay" class="hidden fixed inset-0 bg-white/70 z-10"></div>
+            <!-- Dropdown Lokasi -->
+            <div class="relative z-20 flex justify-end p-4">
+             <!-- Tombol utama -->
+             <button id="dropdownButton" class="flex items-center space-x-2 px-3 py-2 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100">
+             <!-- Icon lokasi -->
+             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+             <path fill-rule="evenodd" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5Z" clip-rule="evenodd" />
+            </svg>
+             <!-- Teks lokasi -->
+            <span id="selectedLocation" class="font-medium text-gray-800 whitespace-nowrap">Jakarta, Indonesia</span>
+            <!-- Panah -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+           </button>
+
+          <!-- Isi dropdown -->
+             <div id="dropdownMenu" class="absolute top-full right-4  -mt-4 w-56 inset-shadow-md inset-shadow-gray-700 bg-white shadow-xl shadow-gray-300 border border-gray-200 rounded-lg  hidden">
+              <ul class="py-1 text-black">
+                <li><button class="w-full text-left px-4 py-2 hover:bg-gray-100 ">Jakarta, Indonesia</button></li>
+                <hr class="border-gray-200">
+                <li><button class="w-full text-left px-4 py-2 hover:bg-gray-100">Bandung, Indonesia</button></li>
+                <hr class="border-gray-200">
+                <li><button class="w-full text-left px-4 py-2 hover:bg-gray-100">Surabaya, Indonesia</button></li>
+                <hr class="border-gray-200">
+                <li><button class="w-full text-left px-4 py-2 hover:bg-gray-100">Yogyakarta, Indonesia</button></li>
+                <hr class="border-gray-200">
+                <li><button class="w-full text-left px-4 py-2 hover:bg-gray-100">Semarang, Indonesia</button></li>
+              </ul>
+             </div>
+         </div>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-             <!-- Card 1 -->
+             <!-- Card 1 --> 
             <div class="relative">
-            <img src="dist/image/6.png" alt="" class="rounded-3xl">
-            <div class="absolute bg-white rounded-2xl bottom-4 left-4 right-4 p-4">
+            <img src="dist/image/6.png" alt="" class="rounded-3xl w-full shadow-xl shadow-gray-400">
+            <div class="absolute bg-white rounded-2xl bottom-4 left-4 right-4 p-4 shadow-md shadow-gray-400">
             <!-- Rating -->
-              <div class="flex mb-1 text-base">
+              <div class="flex mb-1 text-base gap-2">
                 <p class="text-yellow-400">⭐5.0</p>
                 <p class="text-abu-abu">(6.6K+)</p>
               </div>
@@ -386,10 +438,10 @@
             </div>
             <!-- card 2 -->
             <div class="relative">
-              <img src="dist/image/7.png" alt="" class="rounded-3xl">
-               <div class="absolute bg-white rounded-2xl bottom-4 left-4 right-4 p-4">
+              <img src="dist/image/7.png" alt="" class="rounded-3xl w-full shadow-xl shadow-gray-400">
+               <div class="absolute bg-white rounded-2xl bottom-4 left-4 right-4 p-4 shadow-md shadow-gray-400">
             <!-- Rating -->
-              <div class="flex mb-1 text-base">
+              <div class="flex mb-1 text-base gap-2">
                 <p class="text-yellow-400">⭐5.0</p>
                 <p class="text-abu-abu">(3.6K+)</p>
               </div>
@@ -410,10 +462,10 @@
             </div>
             <!-- card 3 -->
              <div class="relative">
-              <img src="dist/image/8.png" alt="" class="rounded-3xl">
-               <div class="absolute bg-white rounded-2xl bottom-4 left-4 right-4 p-4">
+              <img src="dist/image/8.png" alt="" class="rounded-3xl w-full shadow-xl shadow-gray-400">
+               <div class="absolute bg-white rounded-2xl bottom-4 left-4 right-4 p-4 shadow-md shadow-gray-400">
             <!-- Rating -->
-              <div class="flex mb-1 text-base">
+              <div class="flex mb-1 text-base gap-2">
                 <p class="text-yellow-400">⭐5.0</p>
                 <p class="text-abu-abu">(11K+)</p>
               </div>
@@ -435,7 +487,7 @@
           </div>
           <!-- Tombol -->
           <div class="flex justify-center pt-5">
-            <button class="py-3.5 px-3.5 bg-button rounded-xl mt-4 mb-2 flex items-center w-[220px] justify-center text-normal font-semibold hover:text-amber-600">
+            <button class="py-3.5 px-3.5 bg-button rounded-xl shadow-xl shadow-gray-400 mt-4 mb-2 flex items-center w-[220px] justify-center text-normal font-semibold hover:text-amber-600">
                 View All Restaurant
                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -443,104 +495,131 @@
             </button>
           </div>
         </div>
-       </section>
+  </section>
 
-       <!-- About Us -->
-        <section class="container ps-14 mt-32 pe-6 " id="about">
-          <div class=" grid grid-cols-1 md:grid-cols-2 gap-6 relative">
-            <!-- Pembungkus gambar -->
-            <div class="relative ps-14 pe-8">
-              <img src="dist/image/9.png" alt="" class="object cover rounded-2xl">
-               <!-- Kartu info 1-->
-              <div class="absolute right-0 bg-white top-7 p-6 rounded-3xl">  
-                 <svg width="81" height="80" viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="-mt-2">
-                   <circle cx="40.5" cy="40" r="36" fill="#FFF7ED"/>
-                   <path fill-rule="evenodd" clip-rule="evenodd" d="M38.8919 60.6535C39.1226 60.774 39.3806 60.8353 39.6385 60.8333C39.8965 60.8312 40.1524 60.7679 40.3852 60.6453L47.8183 56.6718C49.9261 55.5482 51.5768 54.2918 52.8645 52.8291C55.6645 49.6421 57.1935 45.5746 57.1663 41.3805L57.0782 27.5458C57.0698 25.9523 56.0232 24.5305 54.4753 24.0136L40.6474 19.3741C39.8147 19.0922 38.9024 19.0983 38.0844 19.3884L24.3088 24.1934C22.7694 24.7307 21.7417 26.1628 21.7501 27.7583L21.8381 41.5828C21.8654 45.783 23.4468 49.8321 26.293 52.9864C27.5933 54.4287 29.2586 55.6667 31.3896 56.7719L38.8919 60.6535ZM36.9243 44.3933C37.2347 44.6916 37.6374 44.8386 38.0401 44.8346C38.4428 44.8325 38.8434 44.6813 39.1496 44.379L47.2727 36.3707C47.8831 35.7681 47.8768 34.7997 47.2601 34.2052C46.6414 33.6107 45.6452 33.6148 45.0348 34.2175L38.017 41.1348L35.1436 38.3728C34.5249 37.7783 33.5307 37.7844 32.9183 38.3871C32.308 38.9897 32.3143 39.9581 32.933 40.5526L36.9243 44.3933Z" fill="#FDC886"/>
-                 </svg>
-                 <p class="font-semibold flex justify-center py-2">12 Years</p>
-                 <p class="text-abu-abu font-light">Experience</p>
-              </div>
-              <!-- Kartu info 2 -->
-               <div class="absolute flex left-0 bottom-7 bg-white p-5 rounded-2xl">
-                <img src="dist/image/10.png" alt="" class="rounded-2xl">
-                <div class="ps-2">
-                  <p class="pt-4 text-abu-abu">Chef at restaurant:</p>
-                  <p class="pt-4 font-semibold">Pearl Dolphin</p>
-                  <button class="flex items-center pt-8 text-yellow-400">View Details
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+<!-- About Us -->
+<section class="container px-4 md:px-8 lg:px-12 mt-16 md:mt-24 lg:mt-32 mx-auto" id="about">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 relative">
+        <!-- Pembungkus gambar -->
+        <div class="relative mb-8 lg:mb-0">
+            <!-- Container gambar utama -->
+            <div class="relative rounded-xl lg:rounded-2xl overflow-hidden shadow-lg md:shadow-xl lg:shadow-2xl shadow-gray-300 md:shadow-gray-400">
+                <img src="dist/image/9.png" alt="Chef expert" class="w-full h-auto object-cover">           
+                <!-- Kartu info 1 - Experience -->
+                <div class="absolute items-center justify-center flex flex-col top-3 sm:top-4 md:top-6 lg:top-8 right-3 md:right-4 lg:right-2 bg-white p-2 rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg md:shadow-xl z-10 min-h-[130px] min-w-[100px] md:min-w-[180px] md:min-h-[200px] lg:min-w-[110px] lg:min-h-[100px]">  
+                    <svg class="w-15 h-15 md:w-25 md:h-25 lg:w-15 lg:h-15 xl:w-12 xl:h-12 mx-auto" viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="40.5" cy="40" r="36" fill="#FFF7ED"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.8919 60.6535C39.1226 60.774 39.3806 60.8353 39.6385 60.8333C39.8965 60.8312 40.1524 60.7679 40.3852 60.6453L47.8183 56.6718C49.9261 55.5482 51.5768 54.2918 52.8645 52.8291C55.6645 49.6421 57.1935 45.5746 57.1663 41.3805L57.0782 27.5458C57.0698 25.9523 56.0232 24.5305 54.4753 24.0136L40.6474 19.3741C39.8147 19.0922 38.9024 19.0983 38.0844 19.3884L24.3088 24.1934C22.7694 24.7307 21.7417 26.1628 21.7501 27.7583L21.8381 41.5828C21.8654 45.783 23.4468 49.8321 26.293 52.9864C27.5933 54.4287 29.2586 55.6667 31.3896 56.7719L38.8919 60.6535ZM36.9243 44.3933C37.2347 44.6916 37.6374 44.8386 38.0401 44.8346C38.4428 44.8325 38.8434 44.6813 39.1496 44.379L47.2727 36.3707C47.8831 35.7681 47.8768 34.7997 47.2601 34.2052C46.6414 33.6107 45.6452 33.6148 45.0348 34.2175L38.017 41.1348L35.1436 38.3728C34.5249 37.7783 33.5307 37.7844 32.9183 38.3871C32.308 38.9897 32.3143 39.9581 32.933 40.5526L36.9243 44.3933Z" fill="#FDC886"/>
                     </svg>
-                  </button>
+                    <p class="font-bold text-center py-1 text-xs sm:*:text-sm md:text-base lg:text-lg">12 Years</p>
+                    <p class="text-gray-500 font-light text-center text-[10px] sm:text-xs md:text-sm">Experience</p>
+                </div>     
+                <!-- Kartu info 2 - Restaurant -->
+                <div class="absolute left-3 sm:left-4 md:left-6 lg:left-8 bottom-3 sm:bottom-4 md:bottom-6 lg:bottom-8 bg-white p-5  md:p-6 lg:p-4 rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg md:shadow-xl z-10 min-w-[160px]  md:min-w-[250px] lg:min-w-[200px] ">
+                    <div class="flex items-start gap-2 sm:gap-3 md:gap-4  ">
+                        <img src="dist/image/10.png" alt="Pearl Dolphin restaurant" class="h-full items-center rounded-md  sm:rounded-lg md:rounded-xl w-8  sm:w-10  md:w-12  lg:w-14 object-cover flex-shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <p class="text-gray-500 text-[10px] sm:text-xs md:text-sm leading-tight">Chef at:</p>
+                            <p class="font-semibold text-xs sm:text-sm md:text-base lg:text-lg mt-0.5 sm:mt-1 truncate">Pearl Dolphin</p>
+                            <button class="flex items-center text-yellow-500 hover:text-yellow-600 mt-1 sm:mt-2 md:mt-3 text-[10px] sm:text-xs md:text-sm font-medium group">
+                                View Details
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4 ml-0.5 sm:ml-1 transform group-hover:translate-x-0.5 sm:group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-               </div>
             </div>
-            <!-- Kalimat kanan -->
-             <div class="relative">
-              <!-- Judul -->
-                <div class="pb-20">
-                <p class="text-ungu text-base">Top 4 Expert Chefs</p>
-                <h3 class="pt-4 text-3xl font-semibold">Expert Chefs in Fuddy</h3>
-                </div>
+        </div> 
+        <!-- Konten kanan -->
+        <div class="relative">
+            <!-- Judul Section -->
+            <div class="pb-6 md:pb-12 lg:pb-20">
+                <p class="text-purple-600 text-sm md:text-base lg:text-lg font-medium mb-2 md:mb-3">Top 4 Expert Chefs</p>
+                <h3 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight md:leading-tight lg:leading-tight">
+                    Expert Chefs in Fuddy
+                </h3>
+            </div>
+            <div class="space-y-4 md:space-y-5 lg:space-y-6">
                 <!-- Card 1 -->
-                <div class="ps-4 bg-gray-100 mb-3 p-5 rounded-2xl">
-                  <p class="text-abu-abu pb-3">Pizza</p>
-                  <h4 class="flex justify-between text-[20px] font-semibold">Phoenix Satcheup
-                    <button class="flex items-center text-base text-yellow-400 font-light">Profile Details
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                  </h4>
-                  <div class="items-center flex gap-2 pt-2">
-                    <svg width="10" height="15" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg " class="md:w-[18px] md:h-[20px]"> 
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="#656565"/>
-                    </svg> 
-                    <p class="text-[10px] md:text-[18px] leading-2 ">Jakarta, Indonesia</p>
-                  </div>
-                </div>
-                <!--  Card 2  -->
-                <div class="ps-4 bg-gray-100 mb-3 p-5 rounded-2xl">
-                  <p class="text-abu-abu pb-3">Vegan</p>
-                  <h4 class="flex justify-between text-[20px] font-semibold">Chamber Botfrag</h4>
-                  <div class="items-center flex gap-2 pt-2">
-                    <svg width="10" height="15" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="md:w-[18px] md:h-[20px] text-black">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="currentColor"/>
-                    </svg>
-                    <p class="text-[10px] md:text-[18px] leading-2 ">Bandung, Indonesia</p>
-                  </div>
-                </div>
+                <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
+                    <p class="text-gray-500 pb-2 md:pb-3 text-sm md:text-base">Pizza Specialist</p>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-4">
+                        <h4 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">Phoenix Satcheup</h4>
+                        <button class="flex items-center text-yellow-500 hover:text-yellow-600 text-sm md:text-base font-medium self-start md:self-auto group-hover:translate-x-1 transition-transform">
+                            Profile Details
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 pt-3 md:pt-4">
+                        <svg width="16" height="18" class="text-gray-600 flex-shrink-0" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="currentColor"/>
+                        </svg> 
+                        <p class="text-gray-700 text-sm md:text-base lg:text-lg">Jakarta, Indonesia</p>
+                    </div>
+                </div>      
+                <!-- Card 2 -->
+                <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
+                    <p class="text-gray-500 pb-2 md:pb-3 text-sm md:text-base">Vegan Cuisine</p>
+                    <h4 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2 md:mb-3">Chamber Botfrag</h4>
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="18" class="text-gray-600 flex-shrink-0" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="currentColor"/>
+                        </svg>
+                        <p class="text-gray-700 text-sm md:text-base lg:text-lg">Bandung, Indonesia</p>
+                    </div>
+                </div>                
                 <!-- Card 3 -->
-                <div class="ps-4 bg-gray-100 mb-3 p-5 rounded-2xl">
-                  <p class="text-abu-abu pb-3">roast chicken</p>
-                  <h4 class="flex justify-between text-[20px] font-semibold">Asep Vandal</h4>
-                  <div class="items-center flex gap-2 pt-2">
-                    <svg width="10" height="15" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="md:w-[18px] md:h-[20px] text-black">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="currentColor"/>
-                    </svg>
-                    <p class="text-[10px] md:text-[18px] leading-2 ">Sunda, Indonesia</p>
-                  </div>
-                </div>
+                <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
+                    <p class="text-gray-500 pb-2 md:pb-3 text-sm md:text-base">Roast Specialist</p>
+                    <h4 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2 md:mb-3">Asep Vandal</h4>
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="18" class="text-gray-600 flex-shrink-0" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="currentColor"/>
+                        </svg>
+                        <p class="text-gray-700 text-sm md:text-base lg:text-lg">Sunda, Indonesia</p>
+                    </div>
+                </div>               
                 <!-- Card 4 -->
-                <div class="ps-4 bg-gray-100 p-5 rounded-2xl">
-                  <p class="text-abu-abu pb-3">beef steak</p>
-                  <h4 class="flex justify-between text-[20px] font-semibold">I Made Invoker </h4>
-                  <div class="items-center flex gap-2 pt-2">
-                    <svg width="10" height="15" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="md:w-[18px] md:h-[20px] text-black">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="currentColor"/>
-                    </svg>
-                    <p class="text-[10px] md:text-[18px] leading-2 ">Bali, Indonesia</p>
-                  </div>
+                <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
+                    <p class="text-gray-500 pb-2 md:pb-3 text-sm md:text-base">Beef Master</p>
+                    <h4 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2 md:mb-3">I Made Invoker</h4>
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="18" class="text-gray-600 flex-shrink-0" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.31776C0.5 3.71789 4.34388 0 8.99345 0C13.6561 0 17.5 3.71789 17.5 8.31776C17.5 10.6357 16.657 12.7876 15.2695 14.6116C13.7388 16.6235 11.8522 18.3765 9.72854 19.7524C9.24251 20.0704 8.80387 20.0944 8.27045 19.7524C6.13474 18.3765 4.24809 16.6235 2.7305 14.6116C1.34198 12.7876 0.5 10.6357 0.5 8.31776ZM6.19423 8.57675C6.19423 10.1177 7.45166 11.3297 8.99345 11.3297C10.5362 11.3297 11.8058 10.1177 11.8058 8.57675C11.8058 7.0478 10.5362 5.77683 8.99345 5.77683C7.45166 5.77683 6.19423 7.0478 6.19423 8.57675Z" fill="currentColor"/>
+                        </svg>
+                        <p class="text-gray-700 text-sm md:text-base lg:text-lg">Bali, Indonesia</p>
+                    </div>
                 </div>
-                <!-- Tombol -->
-                 <button class="mt-15 py-3.5 px-3.5 bg-button rounded-xl  flex items-center w-[220px] justify-center text-normal font-semibold hover:text-amber-600">
-                View All Chef
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 arrow-right" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
+            </div>
+            
+            <!-- Tombol View All -->
+            <button class="mt-8 md:mt-8 lg:mt-10 py-3 md:py-4 px-6 md:px-8 bg-button hover:to-amber-600 text-black rounded-xl md:rounded-2xl flex items-center w-full md:w-auto justify-center text-base md:text-lg font-semibold transition-all duration-300 shadow-gray-400 shadow-lg hover:shadow-xl hover:scale-105 transform">
+                View All Chefs
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 ml-2 md:ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
             </button>
-             </div>
-          </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+ <footer class=" text-black bg-gray-100  py-4 mt-6">
+        <div class="container mx-auto px-4">
+            <ul class="flex justify-center">
+                <li>
+                    <co href="https://example.com" class="">
+                        &copy;AlbaniPutra2025
+                    </co>
+                </li>
+            </ul>
+        </div>
+</footer>
 
 
 <script src="./src/script.js"></script>
