@@ -15,7 +15,7 @@
 
   <!-- Navbar Utama -->
 <header class="container">
-     <nav class="flex fixed px-5 justify-between items-center bg-white w-full py-4 z-50 shadow-sm  shadow-gray-400 top-0">
+     <nav class="flex fixed px-5 justify-between items-center bg-white w-full py-4 z-50 shadow-md  shadow-gray-400 top-0">
     <!-- Menu Navigasi -->
     <ul class="hidden md:flex gap-[30px] mr-auto">
       <li><a href="#home" class="hover:text-purple-600 transition-colors text-base">Home</a></li>
@@ -145,23 +145,23 @@
    <!-- Hero Section -->
   <section class="container relative ps-10 w-full h my-32" id="home">
   <!-- Pembungkus Gambar -->
-  <div class="flex h-[564px] ps-10 w-full gap-6 flex-col md:flex-row">
+  <div class="flex h-[564px] ps-6 w-full gap-6 flex-col md:flex-row">
     <!-- Gambar 1 (80%) -->
     <div class="basis-[80%] relative">
       <img src="dist/image/1.png" 
-           class="w-full h-[564px] md:h-[564px] object-cover rounded-l-3xl md:rounded-3xl shadow-md shadow-gray-500" 
+           class="w-full h-[564px] md:h-[564px] object-cover inset-ring-2 inset-ring-gray-400 rounded-l-4xl md:rounded-3xl shadow-xl shadow-gray-500" 
            alt="Restaurant 1">
     </div>
     <!-- Gambar 2 (20%) saat mobile hilang -->
     <div class="basis-[20%] relative">
       <img src="dist/image/2.png" 
-           class="w-full hidden md:block md:h-[564px] object-cover rounded-l-3xl shadow-md shadow-gray-500" 
+           class="w-full hidden md:block md:h-[564px] object-cover rounded-l-3xl shadow-xl shadow-gray-500" 
            alt="Restaurant 2">
     </div>
   </div>
   <!-- Kartu info -->
    <div class="absolute md:pt-7 bg-white h-[180px] w-[220px] md:h-[220px] md:w-[280px] py-5 px-4 rounded-3xl 
-              top-1/2 -translate-y-1/2 left-10 shadow-md shadow-gray-500 ">
+              top-1/2 -translate-y-1/2 left-10 lg:left-6 shadow-md shadow-gray-500 ">
     <!-- Rating -->
     <div class="flex gap-2 items-center text-xs md:text-sm pb-1">
       <p class="text-yellow-400">⭐⭐⭐⭐⭐</p>
@@ -329,7 +329,7 @@
             </div>
            <!-- card 1 -->           
              <div class="relative">
-                <img src="dist/image/3.png" alt="" class= "w-full object-cover rounded-3xl shadow-xl shadow-gray-400 h-[600px] md:h-[800px] lg:h-[475px]">
+                <img src="dist/image/3.png" alt="" class= "w-full object-cover rounded-3xl shadow-xl shadow-gray-400 h-[350px] md:h-[800px] lg:h-[475px]">
                 <div class="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-2xl justify-center shadow-md shadow-gray-300">
                   <div class="flex mb-1 text-base gap-2">
                     <p class="text-yellow-400">⭐5.0</p>
@@ -357,18 +357,18 @@
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-6">
              <!-- card 2 -->
                 <div class="relative ">
-                <img src="dist/image/4.png" alt="" class="w-full h-[600px] md:h-[800px] lg:h-[475px] rounded-3xl shadow-xl shadow-gray-400">               
+                <img src="dist/image/4.png" alt="" class="w-full h-[350px] md:h-[800px] lg:h-[475px] rounded-3xl shadow-xl shadow-gray-400">               
                 </div>
              <!-- card 3 -->
                 <div class="relative ">
-                  <img src="dist/image/5.png" alt="" class="ring-1 ring-gray-500 w-full h-[600px] md:h-[800px] lg:h-[475px] rounded-3xl md:rounded-r-2xl shadow-xl shadow-gray-400">
+                  <img src="dist/image/5.png" alt="" class="ring-1 ring-gray-500 w-full h-[350px] md:h-[800px] lg:h-[475px] rounded-3xl md:rounded-r-2xl shadow-xl shadow-gray-400">
                 </div>
               </div>
         </div>
     </section>
     
     <!-- Services -->
-    <section class="container px-14 mt-45 mx-auto lg:px-6" id="services">
+    <section class="container px-10 mt-45 mx-auto lg:px-6" id="services">
           <!-- Kalimat -->
            <div class="grid grid-cols-1 md:grid-cols-2 pb-10">
             <!-- kiri -->
@@ -414,10 +414,10 @@
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
              <!-- Card 1 --> 
             <div class="relative">
-            <img src="dist/image/6.png" alt="" class="rounded-3xl w-full shadow-xl shadow-gray-400">
-            <div class="absolute bg-white rounded-2xl bottom-4 left-4 right-4 p-4 shadow-md shadow-gray-400">
+            <img src="dist/image/6.png" alt="" class="rounded-3xl w-full shadow-xl shadow-gray-400 h-full">
+            <div class="absolute bg-white rounded-2xl bottom-4 left-4 right-4 p-4 shadow-md shadow-gray-400 ">
             <!-- Rating -->
-              <div class="flex mb-1 text-base gap-2">
+              <div class="flex text-base mb-1 gap-2">
                 <p class="text-yellow-400">⭐5.0</p>
                 <p class="text-abu-abu">(6.6K+)</p>
               </div>
@@ -438,7 +438,7 @@
             </div>
             <!-- card 2 -->
             <div class="relative">
-              <img src="dist/image/7.png" alt="" class="rounded-3xl w-full shadow-xl shadow-gray-400">
+              <img src="dist/image/7.png" alt="" class="rounded-3xl w-full h-full shadow-xl shadow-gray-400">
                <div class="absolute bg-white rounded-2xl bottom-4 left-4 right-4 p-4 shadow-md shadow-gray-400">
             <!-- Rating -->
               <div class="flex mb-1 text-base gap-2">
@@ -497,14 +497,14 @@
         </div>
   </section>
 
-<!-- About Us -->
-<section class="container px-4 md:px-8 lg:px-12 mt-16 md:mt-24 lg:mt-32 mx-auto" id="about">
+  <!-- About Us -->
+<section class="container px-10  lg:px-6 mt-16 md:mt-24 lg:mt-32 mx-auto" id="about">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 relative">
         <!-- Pembungkus gambar -->
-        <div class="relative mb-8 lg:mb-0">
+        <div class="relative">
             <!-- Container gambar utama -->
-            <div class="relative rounded-xl lg:rounded-2xl overflow-hidden shadow-lg md:shadow-xl lg:shadow-2xl shadow-gray-300 md:shadow-gray-400">
-                <img src="dist/image/9.png" alt="Chef expert" class="w-full h-auto object-cover">           
+            <div class="relative">
+                <img src="dist/image/9.png" alt="Chef expert" class="w-full lg:h-[900px] h-[480px] md:h-auto object-cover rounded-3xl lg:rounded-4xl shadow-xl shadow-gray-400 ring-2 ring-yellow-100">           
                 <!-- Kartu info 1 - Experience -->
                 <div class="absolute items-center justify-center flex flex-col top-3 sm:top-4 md:top-6 lg:top-8 right-3 md:right-4 lg:right-2 bg-white p-2 rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg md:shadow-xl z-10 min-h-[130px] min-w-[100px] md:min-w-[180px] md:min-h-[200px] lg:min-w-[110px] lg:min-h-[100px]">  
                     <svg class="w-15 h-15 md:w-25 md:h-25 lg:w-15 lg:h-15 xl:w-12 xl:h-12 mx-auto" viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -530,12 +530,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div> 
+              </div>
+               </div> 
         <!-- Konten kanan -->
         <div class="relative">
             <!-- Judul Section -->
-            <div class="pb-6 md:pb-12 lg:pb-20">
+            <div class="pb-2">
                 <p class="text-purple-600 text-sm md:text-base lg:text-lg font-medium mb-2 md:mb-3">Top 4 Expert Chefs</p>
                 <h3 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight md:leading-tight lg:leading-tight">
                     Expert Chefs in Fuddy
@@ -543,7 +543,7 @@
             </div>
             <div class="space-y-4 md:space-y-5 lg:space-y-6">
                 <!-- Card 1 -->
-                <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
+                  <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
                     <p class="text-gray-500 pb-2 md:pb-3 text-sm md:text-base">Pizza Specialist</p>
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-4">
                         <h4 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">Phoenix Satcheup</h4>
@@ -573,7 +573,7 @@
                     </div>
                 </div>                
                 <!-- Card 3 -->
-                <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
+                  <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
                     <p class="text-gray-500 pb-2 md:pb-3 text-sm md:text-base">Roast Specialist</p>
                     <h4 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2 md:mb-3">Asep Vandal</h4>
                     <div class="flex items-center gap-2">
@@ -584,7 +584,7 @@
                     </div>
                 </div>               
                 <!-- Card 4 -->
-                <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
+                 <div class="bg-gray-50 hover:bg-white transition-all duration-300 p-4 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg group">
                     <p class="text-gray-500 pb-2 md:pb-3 text-sm md:text-base">Beef Master</p>
                     <h4 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2 md:mb-3">I Made Invoker</h4>
                     <div class="flex items-center gap-2">
@@ -594,7 +594,7 @@
                         <p class="text-gray-700 text-sm md:text-base lg:text-lg">Bali, Indonesia</p>
                     </div>
                 </div>
-            </div>
+                </div>
             
             <!-- Tombol View All -->
             <button class="mt-8 md:mt-8 lg:mt-10 py-3 md:py-4 px-6 md:px-8 bg-button hover:to-amber-600 text-black rounded-xl md:rounded-2xl flex items-center w-full md:w-auto justify-center text-base md:text-lg font-semibold transition-all duration-300 shadow-gray-400 shadow-lg hover:shadow-xl hover:scale-105 transform">
@@ -603,13 +603,13 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
             </button>
-        </div>
+             </div>
     </div>
 </section>
 
 
 <!-- Footer -->
- <footer class=" text-black bg-gray-100  py-4 mt-6">
+ <footer class=" text-black bg-gray-300  py-4 mt-6">
         <div class="container mx-auto px-4">
             <ul class="flex justify-center">
                 <li>

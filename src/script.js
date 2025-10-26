@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Tunggu animasi selesai sebelum menyembunyikan
       setTimeout(() => {
         categoryDropdown.classList.add('hidden');
-      }, 300); // Sesuai dengan duration CSS
+      }, 30); // Sesuai dengan duration CSS
     }
   });
 
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Fungsi menampilkan alert
-  function showAlert(message, type = 'info', duration = 5000) {
+  function showAlert(message, type = 'info', duration = 500) {
     const alert = document.getElementById('search-alert');
     const alertMessage = document.getElementById('alert-message');
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       alert.classList.remove('translate-x-full');
       alert.classList.add('translate-x-0');
-    }, 10);
+    }, 300);
 
     isAlertVisible = true;
 
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       alert.classList.add('hidden');
       isAlertVisible = false;
-    }, 300);
+    }, 3000);
 
     if (currentAlertTimeout) {
       clearTimeout(currentAlertTimeout);
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let scrollTimeout;
   window.addEventListener('scroll', function() {
     clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(hideAlert, 100);
+    scrollTimeout = setTimeout(hideAlert, 1000);
   });
 
   document.addEventListener('click', function(event) {
@@ -263,7 +263,7 @@ const button = document.getElementById('dropdownButton');
         menu.classList.add('hidden');
       });
     });
-  
+ 
 
       
     
