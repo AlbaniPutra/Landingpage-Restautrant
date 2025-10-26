@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Fungsi menampilkan alert
-  function showAlert(message, type = 'info', duration = 500) {
+  function showAlert(message, type = 'info', duration = 400) {
     const alert = document.getElementById('search-alert');
     const alertMessage = document.getElementById('alert-message');
 
